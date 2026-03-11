@@ -1,0 +1,96 @@
+import { Link } from 'react-router-dom';
+
+export function Sitemap() {
+  const sections = [
+    {
+      title: '会社概要',
+      links: [
+        { name: '経営理念', href: '/company/philosophy' },
+        { name: '会社情報', href: '/company/info' },
+        { name: 'アクセス', href: '/company/access' },
+      ],
+    },
+    {
+      title: '大家様向け',
+      links: [
+        { name: '賃貸管理サービス', href: '/owner/service' },
+        { name: '管理の流れ', href: '/owner/flow' },
+        { name: 'よくある質問', href: '/owner/faq' },
+        { name: 'お問い合わせ', href: '/owner/contact' },
+      ],
+    },
+    {
+      title: '個人入居者様',
+      links: [
+        { name: '不具合連絡', href: '/tenant/issue' },
+        { name: '退去申し込み', href: '/tenant/move-out' },
+        { name: 'よくある質問', href: '/tenant/faq' },
+        { name: 'お問い合わせ', href: '/tenant/contact' },
+      ],
+    },
+    {
+      title: '法人契約のお客様',
+      links: [
+        { name: '不具合連絡', href: '/corporate/issue' },
+        { name: '解約手続き', href: '/corporate/cancellation' },
+        { name: '契約変更', href: '/corporate/change' },
+        { name: 'お問い合わせ', href: '/corporate/contact' },
+      ],
+    },
+    {
+      title: '仲介業者様向け',
+      links: [
+        { name: '物件確認', href: '/agency/property' },
+        { name: '申込書ダウンロード', href: '/agency/download' },
+        { name: '必要書類', href: '/agency/documents' },
+        { name: 'お問い合わせ', href: '/agency/contact' },
+      ],
+    },
+    {
+      title: 'その他',
+      links: [
+        { name: '管理実績', href: '/performance' },
+        { name: 'お問い合わせ', href: '/contact' },
+        { name: 'プライバシーポリシー', href: '/privacy' },
+      ],
+    },
+  ];
+
+  return (
+    <div >
+      <div className="bg-primary text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-white">サイトマップ</h1>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mb-8">
+          <Link to="/" className="text-primary hover:underline">
+            トップページ
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {sections.map((section, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="mb-4 pb-3 border-b border-gray-200">{section.title}</h3>
+              <ul className="space-y-3">
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <Link
+                      to={link.href}
+                      className="text-gray-600 hover:text-primary transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
