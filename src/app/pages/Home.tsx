@@ -219,10 +219,10 @@ export function Home() {
 
 <div className="w-full border-t-2 border-dotted border-secondary"></div>
 
-<section className="bg-gradient-to-b from-gray-50 to-blue-50">
+<section className="bg-gradient-to-b from-gray-50 to-blue-50 pb-64">
   <div className="pt-24 text-center max-w-3xl mx-auto px-4">
     {/* ロゴ */}
-    <img src="./img/aichitatemono-img.png" alt="ロゴ" className="w-[25%] mx-auto mb-2" />
+    <img src="./img/aichitatemono-img.png" alt="ロゴ" className="w-[25%] mx-auto" />
 
     {/* ABOUT US */}
     <h2 className="text-md tracking-widest font-bold mb-8 text-secondary">| 私たちについて |</h2>
@@ -244,15 +244,9 @@ export function Home() {
   </div>
 </section>
 
-  {/* 斜めカット用の疑似要素 */}
-  {/*<div className="absolute clip-roof  w-full h-64 bg-secondary/10 border-secondary/20 border-16 -skew-y-6 origin-top"></div>*/}
-    {/*あいち建物管理の３つの強み */}
-    <div className="bg-blue-50">
-      <div className=" relative z-10 color-secondary-opacity20 border-16 rounded-3xl overflow-hidden ">
-      <section className="relative  rounded-3xl color-secondary-opacity10 clip-roof pt-24 pb-48 ml-6 lg:mr-0 md:mr-6">
-
-
-      <div className="relative color-secondary-opacity10  max-w-7xl mx-auto px-4 text-center pt-40">
+    <div className="bg-blue-50 absolute  w-full h-full pb-16 z-1"> </div>
+      <section className="relative  bg-[url('/img/bg-house03.svg')] bg-cover  bg-no-repeat -mt-115  pt-120 pb-120 ml-6 mr-0 z-20">
+      <div className="relative   max-w-7xl mx-auto px-4 text-center pt-40">
         {/* タイトル */}
       <div className="flex flex-col items-center">
         <img
@@ -267,7 +261,7 @@ export function Home() {
       </div>
 
         {/* 3つの強み */}
-        <div className="flex flex-col md:flex-row justify-center gap-10 pr-6 pl-6">
+        <div className="flex flex-col md:flex-row justify-center gap-10 pr-6 pl-10">
           {/* 1つ目 */}
           <div className="flex-1 text-center">
             <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
@@ -305,12 +299,10 @@ export function Home() {
         </a>
         </div>
       </section>
-      </div>
-    </div>
 
     {/*賃貸管理とは？ */}
     <div className="color-secondary-opacity10">
-      <section className=" relative z-20 bg-white rounded-3xl py-24 px-8 ml-16 mr-16 lg:mr-0 -mt-24">
+      <section className=" relative z-30 bg-white rounded-3xl py-24 px-8 ml-20 mr-16 lg:mr-0 -mt-96">
         <div className="max-w-7xl mx-auto grid md:grid-cols-[1fr_2fr] z-100 gap-16 items-center">
 
           {/* 左側テキスト */}
