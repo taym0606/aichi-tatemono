@@ -61,19 +61,19 @@ export function Home() {
       title: "大家様・オーナー様",
       description: "賃貸管理の内容や管理開始までの流れを分かりやすくご紹介しています",
       href: "/owner",
-      color: "bg-primary",
+      color: "bg-white",
     },
     {
-      title: "個人入居者様",
+      title: "入居者様",
       description: "不具合連絡・退去申し込み・契約内容の変更、更新など",
       href: "/tenant",
-      color: "bg-primary",
+      color: "bg-white",
     },
     {
-      title: "法人契約のお客様",
-      description: "不具合連絡・解約手続き・契約内容の変更、更新など",
-      href: "/corporate",
-      color: "bg-primary",
+      title: "仲介業者様",
+      description: "申請書ダウンロードや物件確認、必要書類など",
+      href: "/agency",
+      color: "bg-white",
     },
   ];
 
@@ -97,96 +97,88 @@ export function Home() {
 
   return (
     <div>
-{/* ファーストビュー */}
-<section id="firstview" className="xl:min-h-screen bg-gray-50 flex pt-4">
+      {/* ファーストビュー */}
+      <section id="firstview" className="xl:min-h-screen bg-gray-50 flex pt-4">
 
-  <div className="mx-auto w-full grid lg:grid-cols-[1fr_3fr] gap-10 px-6">
+        <div className="mx-auto w-full grid lg:grid-cols-[360px_1fr] gap-10 xl:px-20 lg:px-10 md:px-6 px-4">
 
-    {/* 左側 */}
-    <div className="flex flex-col justify-center ">
+          {/* 左側 */}
+          <div className="flex flex-col justify-center ">
 
-      {/* ロゴ */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-semibold text-green-700  mx-auto">
-          <img src="./img/aichitatemono-img.png" alt="ロゴ" className="w-[50%] mx-auto" />
-          <img src="./img/aichitatemono-logo3.png" alt="株式会社"className="w-[40%] mx-auto mb-2"/>
-          <img src="./img/aichitatemono-logo2.png" alt="あいち建物管理" className="w-[80%] mx-auto"/>
-        </h2>
-      </div>
+            {/* ロゴ */}
+            <div className="mb-6">
+              <h2 className="text-2xl font-semibold text-green-700  mx-auto">
+                {/*<img src="./img/aichitatemono-img.png" alt="ロゴ" className="w-[50%] mx-auto" />*/}
+                <img src="./img/aichitatemono-logo3.png" alt="株式会社"className="w-[40%] mx-auto mb-2"/>
+                <img src="./img/aichitatemono-logo2.png" alt="あいち建物管理" className="w-[80%] mx-auto"/>
+              </h2>
+            </div>
+            <p className="text-lg text-primary text-center mb-2">特許番号 0000号</p>
+            <p className="text-lg text-primary text-center mb-4">特許番号 0000号</p>
 
-      {/* メニューカード */}
-      <div className="grid grid-cols-2 gap-4 mb-8">
+            {/* メニューカード */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
 
-        <a href="/owner" className="bg-white rounded-xl shadow p-4 text-center">
-          <img src="./img/家主.png" alt="" className="mb-2  h-[40px] mx-auto" />
-          <p className="text-md text-primary">大家様<br/>はこちら</p>
-        </a>
+              <a href="/owner" className="bg-white rounded-xl shadow p-4 text-center">
+                <img src="./img/家主.png" alt="" className="mb-2  h-[40px] mx-auto" />
+                <p className="text-md text-primary">大家様<br/>はこちら</p>
+              </a>
 
-        <a href="/agency" className="bg-white rounded-xl shadow p-4 text-center">
-          <img src="./img/仲介事業者様.png" alt="" className="mb-2  h-[40px] mx-auto" />
-          <p className="text-md text-primary">賃貸管理の<br/>流れ</p>
-        </a>
+              <a href="/tenant" className="bg-white rounded-xl shadow p-4 text-center">
+                <img src="./img/個人入居者.png" alt="" className="mb-2 h-[40px] mx-auto" />
+                <p className="text-md text-primary">入居者様<br/>はこちら</p>
+              </a>
 
-        <a href="/tenant" className="bg-white rounded-xl shadow p-4 text-center">
-          <img src="./img/個人入居者.png" alt="" className="mb-2 h-[40px] mx-auto" />
-          <p className="text-md text-primary">入居者様<br/>はこちら</p>
-        </a>
+              <a href="/corporate" className="bg-white rounded-xl shadow p-4 text-center">
+                <img src="./img/法人.png" alt="" className="mb-2 h-[40px] mx-auto" />
+                <p className="text-md text-primary">仲介業者様<br/>はこちら</p>
+              </a>
 
-        <a href="/corporate" className="bg-white rounded-xl shadow p-4 text-center">
-          <img src="./img/法人.png" alt="" className="mb-2 h-[40px] mx-auto" />
-          <p className="text-md text-primary">仲介業者様<br/>はこちら</p>
-        </a>
+              <a href="/company" className="bg-white rounded-xl shadow p-4 text-center">
+                <img src="./img/会社概要.png" alt="" className="mb-2 h-[40px] mx-auto" />
+                <p className="text-md text-primary">会社概要</p>
+              </a>
 
-        <a href="https://www.google.com/maps/@34.9421165,137.165552,13.44z?entry=ttu&g_ep=EgoyMDI2MDMwOS4wIKXMDSoASAFQAw%3D%3D" className="bg-white rounded-xl shadow p-4 text-center">
-          <img src="./img/アクセス.png" alt="" className="mb-2 h-[40px] mx-auto" />
-          <p className="text-md text-primary">アクセス方法</p>
-        </a>
-
-        <a href="/company" className="bg-white rounded-xl shadow p-4 text-center">
-          <img src="./img/会社概要.png" alt="" className="mb-2 h-[40px] mx-auto" />
-          <p className="text-md text-primary">会社概要</p>
-        </a>
-
-      </div>
-    </div>
+            </div>
+          </div>
 
 
-    {/* 右側 */}
-    <div className="flex flex-col justify-center pt-12">
+          {/* 右側 */}
+          <div className="flex flex-col justify-center pt-12">
 
-      {/* キャッチコピー */}
-      <h1 className="z-1 text-4xl md:text-5xl font-bold text-primary leading-18 mb-2 tracking-widest">
-        家主様の大切な資産に、
-        <br />
-        誠実に向き合う
-      </h1>
+            {/* キャッチコピー */}
+            <h1 className="z-1 text-4xl md:text-5xl font-bold text-primary leading-18 mb-2 tracking-widest">
+              大家様の大切な資産に
+              <br />
+              誠実に向き合う
+            </h1>
 
-      {/* 英語コピー */}
-      <p className="text-primary  text-md mb-8 z-1 en">
-        Trust and Integrity for Your Property Assets.
-      </p>
+            {/* 英語コピー */}
+            <p className="text-primary  text-md mb-8 z-1 en">
+              Trust and Integrity for Your Property Assets.
+            </p>
 
-      {/* 画像 */}
-      <div className="relative rounded-3xl overflow-hidden -mt-56 h-[650px]">
+            {/* 画像 */}
+            <div className="relative rounded-3xl overflow-hidden -mt-56 h-[650px]">
 
-      {images.map((img, i) => (
-      <img
-        key={i}
-        src={img}
-        alt="建物"
-        className={`
-            absolute inset-0 w-full h-full object-cover clip-roof-firstview
-            transition-opacity duration-[2000ms]
-            ${i === index ? "opacity-100 animate-zoom" : "opacity-0"}
-        `}
-      />))}
+            {images.map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt="建物"
+              className={`
+                  absolute inset-0 w-full h-full object-cover clip-roof-firstview
+                  transition-opacity duration-[2000ms]
+                  ${i === index ? "opacity-100 animate-zoom" : "opacity-0"}
+              `}
+            />))}
 
-    </div>
+          </div>
 
-    </div>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* お知らせ */}
       <section className="py-24  pb-24 bg-gray-50">
@@ -215,36 +207,35 @@ export function Home() {
         </div>
       </section>
 
-{/*私たちについて */}
+      {/*私たちについて */}
+      <div className="w-full border-t-2 border-dotted border-secondary"></div>
+      <section className="bg-gradient-to-b from-gray-50 to-blue-50 pb-64">
+        <div className="pt-24 text-center max-w-3xl mx-auto px-4">
+          {/* ロゴ */}
+          {/*<img src="./img/aichitatemono-img.png" alt="ロゴ" className="w-[25%] mx-auto" />*/}
 
-<div className="w-full border-t-2 border-dotted border-secondary"></div>
+          {/* ABOUT US */}
+          <h2 className="text-3xl tracking-widest font-bold mb-8 text-secondary">| 私たちについて |</h2>
 
-<section className="bg-gradient-to-b from-gray-50 to-blue-50 pb-64">
-  <div className="pt-24 text-center max-w-3xl mx-auto px-4">
-    {/* ロゴ */}
-    <img src="./img/aichitatemono-img.png" alt="ロゴ" className="w-[25%] mx-auto" />
+          {/* 賃貸管理で大切にしていること */}
+          <h2 className="text-4xl text-primary mb-8 leading-[1.5em] font-bold">
+            大家様、入居者様双方が<br/>安心して利用できる賃貸管理
+          </h2>
 
-    {/* ABOUT US */}
-    <h2 className="text-md tracking-widest font-bold mb-8 text-secondary">| 私たちについて |</h2>
+          {/* 私たちの取り組み（3行＋3行＋1行） */}
+          <div className="text-center text-lg space-y-4 leading-[2em]">
+            {/* 1行目 */}
+            <p>
+              迅速なトラブル対応を行い、入居者様の不安をすぐに解消します。<br/>
+              定期メンテナンスを通して、物件の資産価値を守ります。<br/>
+              契約手続きや書類管理を効率化し、透明性の高い運営を実現します。
+            </p>
+          </div>
+        </div>
+      </section>
 
-    {/* 賃貸管理で大切にしていること */}
-    <h2 className="text-4xl text-primary mb-8 leading-[1.5em] font-bold">
-      家主様、入居者様双方が<br/>安心して利用できる賃貸管理
-    </h2>
-
-    {/* 私たちの取り組み（3行＋3行＋1行） */}
-    <div className="text-center text-lg space-y-4 leading-[2em]">
-      {/* 1行目 */}
-      <p>
-        迅速なトラブル対応を行い、入居者様の不安をすぐに解消します。<br/>
-        定期メンテナンスを通して、物件の資産価値を守ります。<br/>
-        契約手続きや書類管理を効率化し、透明性の高い運営を実現します。
-      </p>
-    </div>
-  </div>
-</section>
-
-    <div className="bg-blue-50 absolute  w-full h-full pb-16 z-1"> </div>
+      {/* 経営理念 */}
+      <div className="bg-blue-50 absolute  w-full h-full pb-16 z-1"> </div>
       <section className="relative  bg-[url('/img/bg-house03.svg')] bg-cover  bg-no-repeat -mt-115  pt-120 pb-120 ml-6 mr-0 z-20">
       <div className="relative   max-w-7xl mx-auto px-4 text-center pt-40">
         {/* タイトル */}
@@ -256,7 +247,7 @@ export function Home() {
         />
 
         <h2 className="text-3xl font-bold text-primary mb-24">
-          あいち建物管理ができること
+          経営理念
         </h2>
       </div>
 
@@ -265,7 +256,7 @@ export function Home() {
           {/* 1つ目 */}
           <div className="flex-1 text-center">
             <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
-            <p className="text-primary text-xl font-semibold mb-8">家主様目線の建物管理</p>
+            <p className="text-primary text-xl font-semibold mb-8">＊＊＊＊＊＊＊＊＊＊＊</p>
             <p className="text-black tracking-wide text-md leading-[1.7em]">
               オーナー様の立場に立った建物管理を心がけています。入居率の維持や建物価値の向上を考え、長期的に安心できる管理サービスをご提供いたします。
             </p>
@@ -274,7 +265,7 @@ export function Home() {
           {/* 2つ目 */}
           <div className=" flex-1 text-center">
             <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
-            <p className="text-primary text-xl font-semibold mb-8">24時間体制のサポート</p>
+            <p className="text-primary text-xl font-semibold mb-8">＊＊＊＊＊＊＊＊＊＊</p>
             <p className="text-black tracking-wide leading-[1.7em]">
               入居者様からのトラブルや設備不具合などのご連絡に、24時間体制で対応いたします。急なトラブルにも迅速に対応し、入居者様とオーナー様の安心を支えます。
             </p>
@@ -283,7 +274,7 @@ export function Home() {
           {/* 3つ目 */}
           <div className="flex-1 text-center">
             <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
-            <p className="text-primary  text-xl font-semibold mb-8">無料相談</p>
+            <p className="text-primary  text-xl font-semibold mb-8">＊＊＊＊＊＊＊＊＊＊</p>
             <p className="text-black tracking-wide leading-[1.7em]">
               賃貸管理に関するご相談は無料で承っております。管理のご検討中の方や現在の管理にお悩みの方も、お気軽にご相談ください。
             </p>
@@ -300,90 +291,49 @@ export function Home() {
         </div>
       </section>
 
-    {/*賃貸管理とは？ */}
-    <div className="color-secondary-opacity10">
-      <section className=" relative z-30 bg-white rounded-3xl py-24 px-8 ml-20 mr-16 lg:mr-0 -mt-96">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-[1fr_2fr] z-100 gap-16 items-center">
+      {/*賃貸管理とは？ */}
+      <div className="color-secondary-opacity10">
+        <section className=" relative z-30 bg-white rounded-3xl py-24 px-8 ml-20 mr-16 md:mr-0 -mt-96">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] z-100 gap-16 items-center">
 
-          {/* 左側テキスト */}
-          <div>
-            <h2 className="text-3xl font-bold text-primary mb-3">
-              賃貸管理の流れ
-            </h2>
+            {/* 左側テキスト */}
+            <div>
+              <h2 className="text-3xl font-bold text-primary mb-3">
+                代表挨拶
+              </h2>
 
-            <p className="text-primary text-md tracking-widest mb-6">
-              PROPERTY MANAGEMENT
-            </p>
+              <p className="text-primary text-md tracking-widest mb-6">
+                Message from the President
+              </p>
 
-            <p className="text-gray-600 leading-loose mb-10 text-md">
-              賃貸管理とは、オーナー様に代わって入居者募集・契約手続き・
-              家賃管理・建物管理などを行い、安定した賃貸経営をサポートする
-              サービスです。あいち建物管理では、入居者対応から建物の維持管理
-              まで幅広くサポートし、オーナー様が安心して賃貸経営を行える環境
-              を整えています。
-            </p>
+              <p className="text-gray-600 leading-loose mb-10 text-md">
+                賃貸管理とは、オーナー様に代わって入居者募集・契約手続き・
+                家賃管理・建物管理などを行い、安定した賃貸経営をサポートする
+                サービスです。あいち建物管理では、入居者対応から建物の維持管理
+                まで幅広くサポートし、オーナー様が安心して賃貸経営を行える環境
+                を整えています。
+              </p>
 
-            <a
-              href="/owner/flow"
-              className="inline-flex justify-items-center bg-primary text-white px-8 py-3 rounded-full hover:opacity-90"
-            >
-              詳しくみる →
-            </a>
-          </div>
-
-
-          {/* 右側カード */}
-          <div className="grid grid-cols-3 gap-12">
-
-            {/* カード1 */}
-            <div className=" relative bg-primary/10 p-8 rounded-2xl text-center ">
-              <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-6 text-4xl -mt-12 -ml-12" >1</p>
-              <img src="/img/flow1.png" className="w-14 mx-auto mb-4"/>
-              <p className="font-semibold text-gray-700">お問い合わせ・ご相談</p>
+              <a
+                href="/owner/flow"
+                className="inline-flex justify-items-center bg-primary text-white px-8 py-3 rounded-full hover:opacity-90"
+              >
+                企業概要はこちら →
+              </a>
             </div>
 
-            {/* カード2 */}
-            <div className="bg-primary/10 p-8 rounded-2xl text-center ">
-                          <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-5.5 text-4xl -mt-12 -ml-12" >2</p>
-              <img src="/img/flow2.png" className="w-14 mx-auto mb-4"/>
-              <p className="font-semibold text-gray-700">物件調査・ご提案</p>
-            </div>
 
-            {/* カード3 */}
-            <div className="bg-primary/10 p-8 rounded-2xl text-center ">
-                          <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-5.5 text-4xl -mt-12 -ml-12" >3</p>
-              <img src="/img/flow3.png" className="w-14 mx-auto mb-4"/>
-              <p className="font-semibold text-gray-700">お見積り・契約内容確認</p>
-            </div>
-
-            {/* カード4 */}
-            <div className="bg-primary/10 p-8 rounded-2xl text-center">
-                          <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-5 text-4xl -mt-12 -ml-12" >4</p>
-              <img src="/img/flow4.png" className="w-14 mx-auto mb-4"/>
-              <p className="font-semibold text-gray-700">スケジュール決定・打合せ</p>
-            </div>
-            
-            {/* カード5 */}
-            <div className="bg-primary/10 p-8 rounded-2xl text-center hover:shadow-md transition">
-                          <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-5.5 text-4xl -mt-12 -ml-12" >5</p>
-              <img src="/img/flow5.png" className="w-14 mx-auto mb-4"/>
-              <p className="font-semibold text-gray-700">ご契約</p>
-            </div>
-            
-            {/* カード6 */}
-            <div className="bg-primary/10 p-8 rounded-2xl text-center hover:shadow-md transition">
-                          <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-5 text-4xl -mt-12 -ml-12" >6</p>
-              <img src="/img/flow6.png" className="w-14 mx-auto mb-4"/>
-              <p className="font-semibold text-gray-700">管理開始準備・管理開始</p>
+            {/* 右側カード */}
+            <div className="">
+              <img src="./img/president.jpg" alt="" className="rounded-3xl "/>
             </div>
 
           </div>
+        </section>
+      </div>
 
-        </div>
-      </section>
-    </div>
       {/* お問い合わせ */}
-      <section className="py-24 color-secondary-opacity10">
+      <section className="py-24 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-center mb-12 text-3xl md:text-md">お問い合わせはこちら</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -391,60 +341,23 @@ export function Home() {
               <Link
                 key={index}
                 to={category.href}
-                className={`${category.color} text-white p-8 rounded-lg hover:opacity-90 transition-opacity`}>
-                <h3 className="mb-3 text-white text-2xl">
+                className={`${category.color} text-primary p-8 rounded-lg hover:bg-secondary hover:text-white transition-colors`}>
+                <h3 className="mb-3 text-2xl">
                   {category.title}
                 </h3>
                 <p className="text-md opacity-90">
                   {category.description}
                 </p>
                 <div className="mt-6 flex items-center text-2xl">
-                  <span>詳しく見る</span>
+                  <span>問い合わせる</span>
                   <span className="ml-2">→</span>
                 </div>
               </Link>
             ))}
           </div>
-          
-          {/* 仲介業者様向け */}
-          <div className=" mt-6 text-center">
-            <Link
-              to="/agency/contact"
-              className="inline-flex items-center mt-8 text-2xl px-12 py-6 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors rounded-lg"
-            >
-              <Building2 className="h-5 w-5 mr-2" />
-              仲介業者様はこちら
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="mb-6 text-white text-md">
-            お気軽にお問い合わせください
-          </h2>
-          <p className="text-2xl mb-8 opacity-90">
-            賃貸管理に関するご相談は無料です。まずはお気軽にご連絡ください。
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <div className="flex items-center justify-center space-x-2">
-              <Phone className="h-5 w-5" />
-              <span>03-0000-0000</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2">
-              <Mail className="h-5 w-5" />
-              <span>info@example.com</span>
-            </div>
-          </div>
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary hover:bg-gray-100 transition-colors rounded-lg"
-          >
-            お問い合わせフォーム
-          </Link>
         </div>
       </section>
     </div>
+
   );
 }

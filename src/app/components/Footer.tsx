@@ -11,19 +11,19 @@ export function Footer() {
             <h3 className="mb-4">会社情報</h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-2">
-                <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <p className="text-sm">〒444-0813<br />愛知県岡崎市羽根町字東荒子57番地AR岡崎スクエア3階</p>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-5 w-5 text-primary flex-shrink-0" />
+                <Phone className="h-5 w-5 text-primary shrink-0" />
                 <p className="text-sm">00-0000-0000</p>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="h-5 w-5 text-primary flex-shrink-0" />
+                <Mail className="h-5 w-5 text-primary shrink-0" />
                 <p className="text-sm">info@example.com</p>
               </div>
               <div>
-                <Link to="/company/index" className="text-sm hover:text-primary transition-colors">
+                <Link to="/company" className="text-sm hover:text-primary transition-colors">
                   会社概要
                 </Link>
               </div>
@@ -93,11 +93,6 @@ export function Footer() {
           <div>
             <h3 className="mb-4">仲介業者様向けサービス</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/agency/contact" className="text-sm hover:text-primary transition-colors">
-                  お問い合わせ
-                </Link>
-              </li>
               <li>
                 <Link to="/agency/property" className="text-sm hover:text-primary transition-colors">
                   物件確認
