@@ -96,10 +96,7 @@ export const router = createBrowserRouter([
         path: 'tenant/contact',
         element: <ContactForm title="お問い合わせ" category="個人入居者様" />,
       },
-      {
-        path: 'tenant/TenantIndex',
-        element: <ContactForm title="個人入居者様" category="個人入居者様" />,
-      },
+      
       // 法人契約のお客様
       { path: 'corporate', Component: CorporateIndex },
       {

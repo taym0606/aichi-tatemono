@@ -5,21 +5,20 @@ import { useEffect, } from "react";
 import { useLocation } from 'react-router-dom';
 
 
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [hasFirstView, setHasFirstView] = useState(false);
 
   const navigation = [
     {
-      name: '個人入居者様',
+      name: '入居者様お問い合わせ',
       href: '/tenant',
     },
+
     {
-      name: '法人契約のお客様',
-      href: '/corporate',
-    },
-    {
-      name: '大家様向け',
+      name: '大家様向けサービス',
       href: '/owner',
       children: [
         { name: 'お問い合わせ', href: '/owner/contact' },
@@ -28,7 +27,7 @@ export function Header() {
       ],
     },
     {
-      name: '仲介業者様向け',
+      name: '仲介業者様向けサービス',
       href: '/agency/AgencyIndex',
       children: [
         { name: '物件確認', href: '/agency/property' },
@@ -37,35 +36,34 @@ export function Header() {
         { name: 'お問い合わせ', href: '/agency/contact' },
       ],
     },
-    { name: '管理実績', href: '/performance' },
     { name: '会社概要' ,href: '/company',},
   ];
   const location = useLocation();
   const [showHeader, setShowHeader] = useState(true);
 
-  useEffect(() => {
-    // Homeページのファーストビュー要素を取得
-    const firstView = document.getElementById("firstview");
+useEffect(() => {
+  const firstView = document.getElementById("firstview");
 
-    if (!firstView || location.pathname !== "/") {
-      // Home以外のページや要素がない場合は常に表示
-      setShowHeader(true);
-      return;
-    }
+  if (!firstView || location.pathname !== "/") {
+    setShowHeader(true);
+    setHasFirstView(false);
+    return;
+  }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // ファーストビューが見えている間は非表示、見えなくなったら表示
-        setShowHeader(!entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
+  setHasFirstView(true);
 
-    observer.observe(firstView);
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setShowHeader(!entry.isIntersecting);
+    },
+    { threshold: 0.1 }
+  );
 
-    return () => observer.unobserve(firstView);
-  }, [location.pathname]);
-  
+  observer.observe(firstView);
+
+  return () => observer.unobserve(firstView);
+}, [location.pathname]);
+
   return (
     <header className={`z-50  shadow-md fixed top-0 left-0 w-full bg-white transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

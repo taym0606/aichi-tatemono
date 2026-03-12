@@ -3,7 +3,7 @@ import { Home } from 'lucide-react';
 
 export function NotFound() {
   return (
-    <div  className="min-h-[60vh] flex items-center justify-center px-4">
+    <div  className="min-h-[60vh] flex items-center justify-center px-4 header-margin">
       <div className="text-center">
         <h1 className="text-6xl mb-4 text-primary">404</h1>
         <h2 className="mb-4">ページが見つかりません</h2>

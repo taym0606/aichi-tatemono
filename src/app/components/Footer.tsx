@@ -22,21 +22,36 @@ export function Footer() {
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                 <p className="text-sm">info@example.com</p>
               </div>
+              <div>
+                <Link to="/company/index" className="text-sm hover:text-primary transition-colors">
+                  会社概要
+                </Link>
+              </div>
+              <div>
+                <Link to="/sitemap" className="text-sm hover:text-primary transition-colors">
+                  サイトマップ
+                </Link>
+              </div>
+              <div>
+                <Link to="/privacy" className="text-sm hover:text-primary transition-colors">
+                  プライバシーポリシー
+                </Link>
+              </div>
             </div>
           </div>
 
           {/* リンク集 1 */}
           <div>
-            <h3 className="mb-4">大家様向け</h3>
+            <h3 className="mb-4">大家様向けサービス</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/owner/service" className="text-sm hover:text-primary transition-colors">
-                  賃貸管理サービス
-                </Link>
-              </li>
               <li>
                 <Link to="/owner/contact" className="text-sm hover:text-primary transition-colors">
                   お問い合わせ
+                </Link>
+              </li>
+              <li>
+                <Link to="/owner/service" className="text-sm hover:text-primary transition-colors">
+                  賃貸管理サービス
                 </Link>
               </li>
               <li>
@@ -49,7 +64,7 @@ export function Footer() {
           
           {/* リンク集 2 */}
           <div>
-            <h3 className="mb-4">個人の入居者様向け</h3>
+            <h3 className="mb-4">入居者様向けサービス</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/tenant/contact" className="text-sm hover:text-primary transition-colors">
@@ -62,7 +77,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/tenant/fap" className="text-sm hover:text-primary transition-colors">
+                <Link to="/corporate/change" className="text-sm hover:text-primary transition-colors">
                   契約内容の変更・更新・確認
                 </Link>
               </li>
@@ -74,37 +89,15 @@ export function Footer() {
             </ul>
           </div>
           
-          {/* リンク集 2 */}
+        {/* リンク集 3 */}
           <div>
-            <h3 className="mb-4">法人契約のお客様向け</h3>
+            <h3 className="mb-4">仲介業者様向けサービス</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/corporate/contact" className="text-sm hover:text-primary transition-colors">
+                <Link to="/agency/contact" className="text-sm hover:text-primary transition-colors">
                   お問い合わせ
                 </Link>
               </li>
-              <li>
-                <Link to="/corporate/issue" className="text-sm hover:text-primary transition-colors">
-                  不具合連絡
-                </Link>
-              </li>
-              <li>
-                <Link to="/corporate/change" className="text-sm hover:text-primary transition-colors">
-                  契約内容の変更・更新・確認
-                </Link>
-              </li>
-              <li>
-                <Link to="/corporate/cancellation" className="text-sm hover:text-primary transition-colors">
-                  解約手続き
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-        　{/* リンク集 3 */}
-          <div>
-            <h3 className="mb-4">仲介業者様向け</h3>
-            <ul className="space-y-2">
               <li>
                 <Link to="/agency/property" className="text-sm hover:text-primary transition-colors">
                   物件確認
@@ -118,50 +111,6 @@ export function Footer() {
               <li>
                 <Link to="/agency/documents" className="text-sm hover:text-primary transition-colors">
                   必要書類
-                </Link>
-              </li>
-              <li>
-                <Link to="/agency/contact" className="text-sm hover:text-primary transition-colors">
-                  お問い合わせ
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* リンク集 5 */}
-          <div>
-            <h3 className="mb-4">会社案内</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/company/index" className="text-sm hover:text-primary transition-colors">
-                  会社概要
-                </Link>
-              </li>
-              <li>
-                <Link to="/performance" className="text-sm hover:text-primary transition-colors">
-                  管理実績
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* リンク集 6 */}
-          <div>
-            <h3 className="mb-4">その他</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/contact" className="text-sm hover:text-primary transition-colors">
-                  お問い合わせ
-                </Link>
-              </li>
-              <li>
-                <Link to="/sitemap" className="text-sm hover:text-primary transition-colors">
-                  サイトマップ
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy" className="text-sm hover:text-primary transition-colors">
-                  プライバシーポリシー
                 </Link>
               </li>
             </ul>

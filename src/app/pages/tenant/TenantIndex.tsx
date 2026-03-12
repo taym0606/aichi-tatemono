@@ -30,7 +30,7 @@ export function TenantIndex() {
   ];
 
   return (
-    <div >
+    <div className="header-margin">
       <div className="bg-secondary text-foreground py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="mb-4">個人入居者様向けサービス</h1>

@@ -24,7 +24,7 @@ export function Performance() {
   ];
 
   return (
-    <div >
+    <div className="header-margin">
       <div className="bg-primary text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-white mb-4">管理実績</h1>

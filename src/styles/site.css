@@ -8,9 +8,22 @@ body {
 }
 /* 屋根カット */
 .clip-roof{
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+}
+
+.clip-roof-firstview{
   clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 100%);
 }
 
 .en{
   font-family: "Roboto Condensed", sans-serif;
+}
+.header-margin{
+  margin-top: 70px;
+}
+.color-secondary-opacity10{
+  background-color:#F5F5EE;
+}
+.color-secondary-opacity20{
+  border-color:#E6E6D3;
 }
