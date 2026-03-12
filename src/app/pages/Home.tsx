@@ -78,7 +78,7 @@ export function Home() {
   ];
 
   const images = [
-    "/img/mansion047.jpg",
+    "/img/firstview01.png",
     "/img/mansion046.jpg",
     "/img/mansion070.jpg",
     "/img/mansion050.jpg",
@@ -216,9 +216,9 @@ export function Home() {
 </section>
 
   {/* 斜めカット用の疑似要素 */}
-  <div className="absolute clip-roof  w-full h-64 bg-secondary opacity-10 border-primary border-16 -skew-y-6 origin-top"></div>
+  <div className="absolute clip-roof  w-full h-64 bg-second border-primary border-16 -skew-y-6 origin-top"></div>
 {/*あいち建物管理の３つの強み */}
-<section className="relative bg-secondary-bg rounded-3xl overflow-hidden mt-60 pt-12 pb-16">
+<section className="relative bg-second rounded-3xl overflow-hidden mt-60 pt-12 pb-16">
 
   <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
     {/* タイトル */}
@@ -229,8 +229,8 @@ export function Home() {
       {/* 1つ目 */}
       <div className="bg-white rounded-xl p-6 flex-1 text-center">
         <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-4 rounded-xl" />
-        <p className="text-green-600 font-semibold mb-2">＊＊＊＊＊＊＊＊</p>
-        <p className="text-gray-700 tracking-wide">
+        <p className="text-primary font-semibold mb-2">24時間365日対応</p>
+        <p className="text-black tracking-wide">
           ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
         </p>
       </div>
@@ -238,8 +238,8 @@ export function Home() {
       {/* 2つ目 */}
       <div className="bg-white rounded-xl p-6 flex-1 text-center">
         <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-4 rounded-xl" />
-        <p className="text-gray-800 font-semibold mb-2">＊＊＊＊＊＊＊＊</p>
-        <p className="text-gray-700 tracking-wide">
+        <p className="text-primary font-semibold mb-2">＊＊＊＊＊＊＊＊</p>
+        <p className="text-black tracking-wide">
           ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
         </p>
       </div>
@@ -247,8 +247,8 @@ export function Home() {
       {/* 3つ目 */}
       <div className="bg-white rounded-xl p-6 flex-1 text-center">
         <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-4 rounded-xl" />
-        <p className="text-gray-800 font-semibold mb-2">＊＊＊＊＊＊＊＊</p>
-        <p className="text-gray-700 tracking-wide">
+        <p className="text-primary font-semibold mb-2">＊＊＊＊＊＊＊＊</p>
+        <p className="text-black tracking-wide">
           ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
         </p>
       </div>
