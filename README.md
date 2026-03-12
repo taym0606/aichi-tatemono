@@ -10,3 +10,4 @@
 
   Run `npm run dev` to start the development server.
   
+  npx @tailwindcss/cli -i ./src/styles/tailwind.css -o ./src/styles/index.css -m -w    

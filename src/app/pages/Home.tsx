@@ -78,7 +78,7 @@ export function Home() {
   ];
 
   const images = [
-    "/img/firstview01.png",
+    "/img/mansion047.jpg",
     "/img/mansion046.jpg",
     "/img/mansion070.jpg",
     "/img/mansion050.jpg",
@@ -216,9 +216,9 @@ export function Home() {
 </section>
 
   {/* 斜めカット用の疑似要素 */}
-  <div className="absolute clip-roof  w-full h-64 bg-second border-primary border-16 -skew-y-6 origin-top"></div>
+  <div className="absolute clip-roof  w-full h-64 bg-secondary-bg border-primary border-16 -skew-y-6 origin-top"></div>
 {/*あいち建物管理の３つの強み */}
-<section className="relative bg-second rounded-3xl overflow-hidden mt-60 pt-12 pb-16">
+<section className="relative bg-secondary-bg rounded-3xl overflow-hidden mt-60 pt-12 pb-16">
 
   <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
     {/* タイトル */}
