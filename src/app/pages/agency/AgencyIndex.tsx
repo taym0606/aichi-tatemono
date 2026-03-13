@@ -31,13 +31,22 @@ export function AgencyIndex() {
 
   return (
     <div className="header-margin">
-      <div className="bg-primary text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-white mb-4">仲介業者様向けサービス</h1>
-          <p className="text-lg opacity-90">
-            スムーズなお取引のためのサポートを提供しています
-          </p>
-        </div>
+      <div className="flex flex-col justify-center pt-12 lg:order-2 order-1 px-6 lg:px-12">
+
+            {/* キャッチコピー */}
+            <h1 className="z-15 text-3xl md:text-5xl font-bold text-primary leading-12 lg:leading-18 mb-2 tracking-widest">
+              仲介業者様向けサービス
+            </h1>
+
+            {/* 英語コピー */}
+            <p className="text-primary  text-md mb-8 z-15 en">
+              Services for Agencys
+            </p>
+
+            {/* 画像 */}
+            <div className="relative rounded-3xl overflow-hidden -mt-20 lg:-mt-40 h-[450px] z-10">
+            <img src="./img/mansion047.jpg" alt="建物" className={`absolute inset-0 w-full h-full object-cover clip-roof-firstview`}/>
+            </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -52,7 +61,7 @@ export function AgencyIndex() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-12">
           {services.map((service, index) => (
             <Link
               key={index}

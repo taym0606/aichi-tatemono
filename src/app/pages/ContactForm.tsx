@@ -3,12 +3,13 @@ import { Send } from 'lucide-react';
 
 interface ContactFormProps {
   title: string;
-  category: string;
+  category: "owner" | "tenant" | "corporate";
 }
 
 export function ContactForm({ title, category }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: '',
+    companyname:'',
     email: '',
     phone: '',
     subject: '',
@@ -46,22 +47,23 @@ export function ContactForm({ title, category }: ContactFormProps) {
           </p>
         </div>
 
+
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="name" className="block mb-2">
+            <label htmlFor="companyname" className="block mb-2">
               氏名 <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="companyname"
+              name="companyname"
               required
-              value={formData.name}
+              value={formData.companyname}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
-
+          
           <div>
             <label htmlFor="email" className="block mb-2">
               メールアドレス <span className="text-red-500">*</span>

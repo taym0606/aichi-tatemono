@@ -16,7 +16,6 @@ export function Header() {
     {name: '大家様向けサービス',href: '/owner',},
     {name: '仲介業者様向けサービス',href: '/agency',},
     {name: '会社概要' ,href: '/company',},
-    {name: 'お問い合わせ',href:'/contact'}
   ];
   const location = useLocation();
   const [showHeader, setShowHeader] = useState(true);
@@ -56,7 +55,7 @@ useEffect(() => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:-ml-96 lg:-ml-64">
+          <nav className="hidden lg:flex items-center space-x-1 xl:-ml-96 lg:-ml-82">
             {navigation.map((item) => (
               <div
                 key={item.name}
@@ -66,12 +65,12 @@ useEffect(() => {
               >
                 {item.children ? (
                   <>
-                    <button className="flex items-center px-3 py-2 hover:text-primary transition-colors">
+                    <button className="flex items-center px-3 py-2 hover:text-primary transition-colors ">
                       {item.name}
                       <ChevronDown className="ml-1 h-4 w-4" />
                     </button>
                     {openDropdown === item.name && (
-                      <div className="absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md overflow-hidden">
+                      <div className=" absolute left-0 mt-0 w-56 bg-white shadow-lg rounded-md overflow-hidden">
                         {item.children.map((child) => (
                           <Link
                             key={child.name}

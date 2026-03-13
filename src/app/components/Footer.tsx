@@ -7,38 +7,6 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {/* 会社情報 */}
-          <div>
-            <h3 className="mb-4">会社情報</h3>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-2">
-                <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <p className="text-sm">〒444-0813<br />愛知県岡崎市羽根町字東荒子57番地AR岡崎スクエア3階</p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-5 w-5 text-primary shrink-0" />
-                <p className="text-sm">00-0000-0000</p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-5 w-5 text-primary shrink-0" />
-                <p className="text-sm">info@example.com</p>
-              </div>
-              <div>
-                <Link to="/company" className="text-sm hover:text-primary transition-colors">
-                  会社概要
-                </Link>
-              </div>
-              <div>
-                <Link to="/sitemap" className="text-sm hover:text-primary transition-colors">
-                  サイトマップ
-                </Link>
-              </div>
-              <div>
-                <Link to="/privacy" className="text-sm hover:text-primary transition-colors">
-                  プライバシーポリシー
-                </Link>
-              </div>
-            </div>
-          </div>
 
           {/* リンク集 1 */}
           <div>
@@ -110,7 +78,51 @@ export function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* リンク集 4 */}
+          <div>
+            <a className="mb-4 " >その他</a>
+            <ul className="space-y-2 mt-4">
+              <li>
+                <Link to="/coporate" className="text-sm hover:text-primary transition-colors">
+                  会社概要
+                </Link>
+              </li>
+              <li>
+                <Link to="/news" className="text-sm hover:text-primary transition-colors">
+                  お知らせ
+                </Link>
+              </li>
+              <li>
+                <Link to="/sitemap" className="text-sm hover:text-primary transition-colors">
+                  サイトマップ
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy" className="text-sm hover:text-primary transition-colors">
+                  プライバシーポリシー
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
+      <div className='px-4 sm:px-6 lg:px-8 '>
+        <h3 className="mb-4 ">会社情報</h3>
+          <div className="space-y-3">
+            <div className="flex items-start space-x-2">
+              <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+              <p className="text-sm">〒444-0813<br />愛知県岡崎市羽根町字東荒子57番地AR岡崎スクエア3階</p>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Phone className="h-5 w-5 text-primary shrink-0" />
+              <p className="text-sm">00-0000-0000</p>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Mail className="h-5 w-5 text-primary shrink-0" />
+              <p className="text-sm">info@example.com</p>
+            </div>
+      </div>
 
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-200">

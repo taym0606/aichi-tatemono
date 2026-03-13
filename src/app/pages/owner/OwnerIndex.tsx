@@ -43,12 +43,35 @@ export function OwnerIndex() {
 
           </div>
 
+        <section className="mb-16">
+          <h2 className="text-center mb-12 text-3xl font-bold text-primary mt-24">サービス一覧</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Link
+                key={index}
+                to={service.href}
+                className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
+              >
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <service.icon className="h-6 w-6" />
+                </div>
+                <h3 className="mb-3">{service.title}</h3>
+                <p className="text-sm text-gray-600 mb-4">{service.description}</p>
+                <div className="text-primary flex items-center text-sm group-hover:underline">
+                  詳しく見る
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <h2 className="lg:text-3xl text-2xl font-bold text-primary mb-12 mx-auto mt-24">
           あいち建物管理のできること
         </h2>
 
         {/* 3つの強み */}
-        <div className="flex flex-col md:flex-row justify-center gap-10 pr-6 pl-10">
+        <div className="flex flex-col md:flex-row justify-center gap-10 pr-6 pl-10 mb-24">
           {/* 1つ目 */}
           <div className="flex-1 text-center">
             <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
@@ -77,28 +100,6 @@ export function OwnerIndex() {
           </div>
         </div>
 
-        <section className="mb-16">
-          <h2 className="text-center mb-12 text-3xl font-bold text-primary mt-24">サービス一覧</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Link
-                key={index}
-                to={service.href}
-                className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
-              >
-                <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-                  <service.icon className="h-6 w-6" />
-                </div>
-                <h3 className="mb-3">{service.title}</h3>
-                <p className="text-sm text-gray-600 mb-4">{service.description}</p>
-                <div className="text-primary flex items-center text-sm group-hover:underline">
-                  詳しく見る
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
 
         <section className="bg-primary text-white p-12 rounded-lg text-center mb-24">
           <h2 className="text-white mb-4 text-lg">お気軽にご相談ください</h2>

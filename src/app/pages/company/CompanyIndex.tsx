@@ -48,7 +48,7 @@ export function CompanyIndex() {
 
             {/* 英語コピー */}
             <p className="text-primary  text-md mb-8 z-15 en">
-              Services for residents
+              Company Profile
             </p>
 
             {/* 画像 */}
@@ -59,7 +59,7 @@ export function CompanyIndex() {
 
       {/* 経営理念 */}
       <div className="absolute  w-full h-full pb-16 z-1"> </div>
-      <section className="relative  -mt-170 lg:-mt-145  pt-120 pb-120 lg:ml-6 mr-0 z-20">
+      <section className="relative  -mt-145  pt-120 pb-120 lg:ml-6 mr-0 z-20">
       <div className="relative   max-w-7xl mx-auto px-4 text-center pt-40">
         {/* タイトル */}
       <div className="flex flex-col items-center">
@@ -69,7 +69,7 @@ export function CompanyIndex() {
           className="w-[60px] mb-6"
         />
 
-        <h2 className="text-3xl font-bold text-primary mb-24">
+        <h2 className="text-3xl font-bold text-primary mb-12">
           経営理念
         </h2>
       </div>

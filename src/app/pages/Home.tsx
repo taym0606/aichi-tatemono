@@ -103,7 +103,7 @@ export function Home() {
         <div className="mx-auto w-full grid lg:grid-cols-[360px_1fr] gap-10 xl:px-20 lg:px-10 md:px-6 px-4">
 
           {/* 左側 */}
-          <div className="flex flex-col justify-center lg:order-1  order-2 ">
+          <div className="flex flex-col justify-center lg:order-1  order-2 lg:pt-15 ">
 
             {/* ロゴ */}
             <div className="mb-6 lg:-mt-0 -mt-25">
@@ -113,7 +113,7 @@ export function Home() {
                 <img src="./img/aichitatemono-logo2.png" alt="あいち建物管理" className="lg:w-[80%] w-[70%] mx-auto"/>
               </h2>
               <div className="grid grid-cols-2 lg:grid lg:grid-cols-1">
-                <p className="text-md lg:text-lg text-primary text-center mb-4">賃貸住宅管理業登録番号<br/>国土交通大臣(2)第810000号</p>
+                <p className="text-md lg:text-lg text-primary text-center mb-2">賃貸住宅管理業登録番号<br/>国土交通大臣(2)第810000号</p>
                 <p className="text-md lg:text-lg text-primary text-center lg:mb-2">宅建番号<br/>愛知県知事(3)第114514号</p>
               </div>
             </div>
@@ -137,19 +137,19 @@ export function Home() {
               </a>
 
               <a href="/company" className="bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
-                <img src="./img/会社概要.png" alt="" className="mb-4 h-[40px] mx-auto" />
+                <img src="./img/会社概要.png" alt="" className="mb-5 h-[40px] mx-auto" />
                 <p className="text-md text-primary">会社概要</p>
               </a>
 
                 {/* 電話 */}
                 <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-primary rounded-xl hover:bg-primary/90">
-                  <span className="text-mb text-white">✆</span>
+                  <Phone className="h-5 w-5 text-white shrink-0" />
                   <span className="text-mb text-white">0564-00-0000</span>
                 </a>
 
                 {/* メール */}
                 <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-secondary rounded-xl hover:bg-secondary/90">
-                  <span className="text-mb text-white">✉</span>
+                  <Mail className="h-5 w-5 text-white shrink-0" />
                   <span className="text-mb text-white">info@example.com</span>
                 </a>
             </div>
@@ -348,10 +348,10 @@ export function Home() {
       {/* 管理実績 */}
       <section className="py-24 color-secondary-opacity10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl p-8  border-primary border-1">
+          <div className="bg-white rounded-3xl p-4 lg:p-8  border-primary border-1">
           <h2 className="text-center pt-12 pb-20 text-primary text-3xl font-bold">管理実績</h2>
             {/* 賃貸管理項目 */}
-            <div className="flex flex-col md:flex-row justify-center gap-12 pr-6 pl-10 mb-12">
+            <div className="flex flex-col md:flex-row justify-center gap-12 pr-6 pl-6 mb-12">
               {/* 1つ目 */}
               <div className="flex-1 text-center">
                 <p className="text-primary text-2xl font-semibold mb-4 text-left pl-4 border-l-2 border-secondary">岡崎市</p>

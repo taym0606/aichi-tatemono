@@ -40,7 +40,7 @@ export function TenantIndex() {
 
             {/* 英語コピー */}
             <p className="text-primary  text-md mb-8 z-15 en">
-              Services for residents
+              Services for Residents
             </p>
 
             {/* 画像 */}
