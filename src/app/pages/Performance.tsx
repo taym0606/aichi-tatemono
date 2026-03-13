@@ -49,76 +49,104 @@ export function Performance() {
             ))}
           </div>
         </section>
-
-        <section className="mb-16 bg-gray-50 p-12 rounded-lg">
-          <h2 className="text-center mb-12">エリア別管理実績</h2>
-          <div className="max-w-3xl mx-auto">
-            {areas.map((area, index) => (
-              <div key={index} className="mb-6 last:mb-0">
-                <div className="flex justify-between items-center mb-2">
-                  <span>{area.area}</span>
-                  <span className="text-primary">{area.properties.toLocaleString()}戸</span>
-                </div>
-                <div className="bg-gray-200 h-3 rounded-full overflow-hidden">
-                  <div
-                    className="bg-primary h-full rounded-full transition-all"
-                    style={{ width: `${(area.properties / 5247) * 100}%` }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-center mb-12">主な実績・受賞歴</h2>
-          <div className="max-w-3xl mx-auto">
-            <div className="space-y-4">
-              {achievements.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4"
-                >
-                  <span className="bg-primary text-white px-4 py-2 rounded flex-shrink-0">
-                    {item.year}
-                  </span>
-                  <p className="pt-2">{item.achievement}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-primary text-white p-12 rounded-lg">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-white mb-4">高い入居率の秘訣</h2>
-            <p className="text-lg mb-8 opacity-90">
-              当社では、綿密な市場調査と適切な家賃設定、迅速な募集活動により、
-              業界トップクラスの入居率98.2%を維持しています。
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div className="bg-white/10 p-6 rounded-lg">
-                <h3 className="text-white mb-2">市場調査</h3>
-                <p className="text-sm opacity-90">
-                  周辺の賃貸市場を徹底調査し、最適な家賃設定を提案します。
-                </p>
-              </div>
-              <div className="bg-white/10 p-6 rounded-lg">
-                <h3 className="text-white mb-2">迅速な対応</h3>
-                <p className="text-sm opacity-90">
-                  空室発生から24時間以内に募集活動を開始します。
-                </p>
-              </div>
-              <div className="bg-white/10 p-6 rounded-lg">
-                <h3 className="text-white mb-2">広告展開</h3>
-                <p className="text-sm opacity-90">
-                  大手ポータルサイトや自社サイトで幅広く物件を紹介します。
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
-    </div>
+
+      <section className="py-24 color-secondary-opacity10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl p-4 lg:p-8">
+          <h2 className="text-center pt-12 pb-20 text-primary text-3xl font-bold">管理実績</h2>
+            {/* 賃貸管理項目 */}
+            <div className="flex flex-col md:flex-row justify-center gap-12 pr-6 pl-6 mb-12">
+              {/* 1つ目 */}
+              <div className="flex-1 text-center">
+                <p className="text-primary text-2xl font-semibold mb-4 text-left pl-4 border-l-2 border-secondary">岡崎市</p>
+                <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
+                <div className="text-left max-w-xs mx-auto space-y-2 text-md tracking-wide">
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">建物種類</span>
+                    <span className="font-medium text-center">マンション</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">築年数</span>
+                    <span className="font-medium text-center">築18年</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">構造</span>
+                    <span className="font-medium text-center">RC造</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr]">
+                    <span className="text-gray-500">間取り</span>
+                    <span className="font-medium text-center">1LDK〜3LDK</span>
+                  </div>
+                </div>
+              </div>
+            
+              {/* 2つ目 */}
+              <div className="flex-1 text-center">
+                <p className="text-primary text-2xl font-semibold mb-4 text-left pl-4 border-l-2 border-secondary">安城市</p>
+                <img src="./img/mansion070.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
+                <div className="text-left max-w-xs mx-auto space-y-2 text-md tracking-wide">
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">建物種類</span>
+                    <span className="font-medium text-center">アパート</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">築年数</span>
+                    <span className="font-medium text-center">築23年</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">構造</span>
+                    <span className="font-medium text-center">RC造</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr]">
+                    <span className="text-gray-500">間取り</span>
+                    <span className="font-medium text-center">1LK</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 3つ目 */}
+              <div className="flex-1 text-center">
+                <p className="text-primary text-2xl font-bold mb-4 text-left pl-4 border-l-2 border-secondary">豊橋市</p>
+                <img src="./img/mansion047.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
+                <div className="text-left max-w-xs mx-auto space-y-2 text-md tracking-wide">
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">建物種類</span>
+                    <span className="font-medium text-center">コーポ</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">築年数</span>
+                    <span className="font-medium text-center">築7年</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">構造</span>
+                    <span className="font-medium text-center">RC造</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr]">
+                    <span className="text-gray-500">間取り</span>
+                    <span className="font-medium text-center">1LDK</span>
+                  </div>
+                </div>
+              </div>
+
+
+
+              
+            </div>
+            </div>
+            </div>
+        </section>
+  </div>
   );
 }

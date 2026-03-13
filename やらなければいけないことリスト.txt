@@ -4,51 +4,9 @@ toppage
 ファーストビューのところがちょっと寂しい
 ＝＞下のほうに手書きの草とかの装飾があればほしい＝＞とりあえずモノだけ持ってきた
 
-スマホレスポンシブー＞明日
-経営理念のとりあえずの書き込み
-✓賃貸管理の流れの部分をさしかえる
-✓ロゴはずす
-管理実績の欄はとりあえず実装できるように作成しておく
-      {/* 管理実績 */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center mb-12">管理実績</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-md text-center">
-              <div className="text-4xl mb-2 text-primary">
-                5,000+
-              </div>
-              <div className="text-sm text-gray-600">
-                管理戸数
-              </div>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-md text-center">
-              <div className="text-4xl mb-2 text-primary">
-                98%
-              </div>
-              <div className="text-sm text-gray-600">
-                入居率
-              </div>
-            </div>
-            <div className="bg-white p-8 rounded-lg shadow-md text-center">
-              <div className="text-4xl mb-2 text-primary">
-                20+
-              </div>
-              <div className="text-sm text-gray-600">
-                年の実績
-              </div>
-            </div>
-          </div>
-          <div className="text-center mt-8">
-            <Link
-              to="/performance"
-              className="inline-flex items-center px-6 py-3 bg-primary text-white hover:bg-primary/90 transition-colors rounded-lg"
-            >
-              詳しい実績を見る
-            </Link>
-          </div>
-        </div>
-      </section>
+✓スマホレスポンシブー＞明日->完了
+✓経営理念のとりあえずの書き込み
+✓管理実績の欄はとりあえず実装できるように作成しておく
 
 
 

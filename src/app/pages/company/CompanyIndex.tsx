@@ -103,14 +103,6 @@ export function CompanyIndex() {
             </p>
           </div>
         </div>
-
-        {/* ボタン */}
-        <a
-          href="./company"
-          className="inline-block mt-12 bg-primary text-white font-semibold py-4 px-16 rounded-full hover:bg-primary/85 transition"
-        >
-          詳しくはこちら →
-        </a>
         </div>
       </section>
 
@@ -136,13 +128,6 @@ export function CompanyIndex() {
                 まで幅広くサポートし、オーナー様が安心して賃貸経営を行える環境
                 を整えています。
               </p>
-
-              <a
-                href="/owner/flow"
-                className="inline-flex justify-items-center bg-primary text-white px-8 py-3 rounded-full hover:opacity-90 font-bold"
-              >
-                企業概要はこちら →
-              </a>
             </div>
 
 

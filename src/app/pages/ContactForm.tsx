@@ -3,7 +3,7 @@ import { Send } from 'lucide-react';
 
 interface ContactFormProps {
   title: string;
-  category: "owner" | "tenant" | "corporate";
+  category: string;
 }
 
 export function ContactForm({ title, category }: ContactFormProps) {

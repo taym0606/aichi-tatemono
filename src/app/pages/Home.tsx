@@ -66,13 +66,13 @@ export function Home() {
     {
       title: "個人の入居者様",
       description: "物件の確認や空室情報など小さなことでもご相談できます",
-      href: "/tarent/contact",
+      href: "/tenant/contact",
       color: "bg-white",
     },
     {
       title: "法人契約の入居者様",
       description: "物件の確認や空室情報など小さなことでもご相談できます",
-      href: "/coporate/contact",
+      href: "/corporate/contact",
       color: "bg-white",
     },
   ];
@@ -217,6 +217,13 @@ export function Home() {
               ))}
             </div>
           </div>
+                {/* ボタン */}
+          <a
+            href="./news"
+            className="block w-fit mx-auto mt-12 bg-primary text-white font-semibold py-4 px-16 rounded-full hover:bg-primary/85 transition"
+          >
+            もっと見る →
+          </a>
         </div>
       </section>
 
@@ -249,13 +256,13 @@ export function Home() {
 
       {/* 経営理念 */}
       <div className="bg-blue-50 absolute  w-full h-full pb-16 z-1"> </div>
-      <section className="relative  bg-[url('/img/bg-house03.svg')] bg-cover  bg-no-repeat -mt-170 lg:-mt-145  pt-120 pb-120 lg:ml-6 mr-0 z-20">
-      <div className="relative   max-w-7xl mx-auto px-4 text-center pt-40">
+      <section className="relative  bg-[url('/img/bg-house03-mobile.svg')] md:bg-[url('/img/bg-house03.svg')] bg-cover  bg-no-repeat -mt-110 lg:-mt-135  pt-100 pb-110 lg:ml-6 mr-0 z-20">
+      <div className="relative   max-w-7xl mx-auto px-4 text-center pt-30 md:pt-50 ">
         {/* タイトル */}
       <div className="flex flex-col items-center">
         <img
           src="./img/会社概要.png"
-          alt=""
+          alt="" 
           className="w-[60px] mb-6"
         />
 

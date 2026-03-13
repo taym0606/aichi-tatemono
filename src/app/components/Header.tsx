@@ -55,7 +55,7 @@ useEffect(() => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:-ml-96 lg:-ml-82">
+          <nav className="hidden lg:flex items-center space-x-1 xl:-ml-96 lg:-ml-82  lg:text-xs xl:text-base">
             {navigation.map((item) => (
               <div
                 key={item.name}

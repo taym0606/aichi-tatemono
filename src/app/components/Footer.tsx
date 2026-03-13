@@ -32,8 +32,8 @@ export function Footer() {
           
           {/* リンク集 2 */}
           <div>
-            <h3 className="mb-4">入居者様向けサービス</h3>
-            <ul className="space-y-2">
+            <a  href="/tenant" className="mb-4 ">入居者様向けサービス</a>
+            <ul className="space-y-2 mt-4">
               <li>
                 <Link to="/tenant/contact" className="text-sm hover:text-primary transition-colors">
                   お問い合わせ
@@ -59,8 +59,8 @@ export function Footer() {
           
         {/* リンク集 3 */}
           <div>
-            <h3 className="mb-4">仲介業者様向けサービス</h3>
-            <ul className="space-y-2">
+            <a  href="/agency" className="mb-4 ">仲介業者様向けサービス</a>
+            <ul className="space-y-2 mt-4">
               <li>
                 <Link to="/agency/property" className="text-sm hover:text-primary transition-colors">
                   物件確認
@@ -84,7 +84,7 @@ export function Footer() {
             <a className="mb-4 " >その他</a>
             <ul className="space-y-2 mt-4">
               <li>
-                <Link to="/coporate" className="text-sm hover:text-primary transition-colors">
+                <Link to="/company" className="text-sm hover:text-primary transition-colors">
                   会社概要
                 </Link>
               </li>

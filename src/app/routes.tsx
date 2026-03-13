@@ -11,6 +11,7 @@ import { AgencyIndex } from './pages/agency/AgencyIndex';
 import { Performance } from './pages/Performance';
 import { ContactForm } from './pages/ContactForm';
 import { FAQ } from './pages/FAQ';
+import { News } from './pages/news';
 import { Privacy } from './pages/Privacy';
 import { Sitemap } from './pages/Sitemap';
 import { NotFound } from './pages/NotFound';
@@ -232,7 +233,9 @@ export const router = createBrowserRouter([
       },
       { path: 'privacy', Component: Privacy },
       { path: 'sitemap', Component: Sitemap },
+      { path: 'news', Component: News },
       { path: '*', Component: NotFound },
+
     ],
   },
 ]);
