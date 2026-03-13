@@ -30,28 +30,27 @@ export function TenantIndex() {
   ];
 
   return (
-    <div className="header-margin">
-      <div className="bg-secondary text-foreground py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="mb-4">個人入居者様向けサービス</h1>
-          <p className="text-lg">
-            快適な住環境のために、各種サポートをご提供しています
-          </p>
-        </div>
-      </div>
+    <div className='header-margin bg-gray-50'>
+          <div className="flex flex-col justify-center pt-12 lg:order-2 order-1 px-6 lg:px-12">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="mb-12 bg-yellow-50 border-l-4 border-secondary p-6 rounded">
-          <h3 className="mb-2">緊急時の連絡先</h3>
-          <p className="text-sm text-gray-700 mb-3">
-            水漏れ・ガス漏れなど緊急のトラブルが発生した場合は、以下の緊急連絡先までお電話ください。
-          </p>
-          <p className="text-lg">
-            24時間緊急対応ダイヤル: <span className="text-primary">0120-000-000</span>
-          </p>
-        </div>
+            {/* キャッチコピー */}
+            <h1 className="z-15 text-3xl md:text-5xl font-bold text-primary leading-12 lg:leading-18 mb-2 tracking-widest">
+              入居者様向けサービス
+            </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* 英語コピー */}
+            <p className="text-primary  text-md mb-8 z-15 en">
+              Services for residents
+            </p>
+
+            {/* 画像 */}
+            <div className="relative rounded-3xl overflow-hidden -mt-20 lg:-mt-40 h-[450px] z-10">
+            <img src="./img/mansion047.jpg" alt="建物" className={`absolute inset-0 w-full h-full object-cover clip-roof-firstview`}/>
+
+          </div>
+
+        <p className='text-primary text-center text-3xl mt-24 mb-12'>お問い合わせはこちら</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8  mb-24 lg:px-12">
           {services.map((service, index) => (
             <Link
               key={index}
@@ -61,8 +60,8 @@ export function TenantIndex() {
               <div className="w-12 h-12 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-foreground transition-colors">
                 <service.icon className="h-6 w-6" />
               </div>
-              <h3 className="mb-3">{service.title}</h3>
-              <p className="text-sm text-gray-600">{service.description}</p>
+              <h3 className="mb-3 text-xl text-primary">{service.title}</h3>
+              <p className="text-md text-gray-600">{service.description}</p>
             </Link>
           ))}
         </div>

@@ -13,6 +13,9 @@
 
  git stash
 
+web公開URL
+https://aichi-tatemono.taym0606.workers.dev/
+
  git pull origin main
   ## Running the code
 

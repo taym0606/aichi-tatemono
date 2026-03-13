@@ -12,31 +12,11 @@ export function Header() {
   const [hasFirstView, setHasFirstView] = useState(false);
 
   const navigation = [
-    {
-      name: '入居者様お問い合わせ',
-      href: '/tenant',
-    },
-
-    {
-      name: '大家様向けサービス',
-      href: '/owner',
-      children: [
-        { name: 'お問い合わせ', href: '/owner/contact' },
-        { name: '賃貸管理サービス', href: '/owner/service' },
-        { name: '管理の流れ', href: '/owner/flow' },
-      ],
-    },
-    {
-      name: '仲介業者様向けサービス',
-      href: '/agency/AgencyIndex',
-      children: [
-        { name: '物件確認', href: '/agency/property' },
-        { name: '申込書ダウンロード', href: '/agency/download' },
-        { name: '必要書類', href: '/agency/documents' },
-        { name: 'お問い合わせ', href: '/agency/contact' },
-      ],
-    },
-    { name: '会社概要' ,href: '/company',},
+    {name: '入居者様向けサービス',href: '/tenant',},
+    {name: '大家様向けサービス',href: '/owner',},
+    {name: '仲介業者様向けサービス',href: '/agency',},
+    {name: '会社概要' ,href: '/company',},
+    {name: 'お問い合わせ',href:'/contact'}
   ];
   const location = useLocation();
   const [showHeader, setShowHeader] = useState(true);

@@ -59,20 +59,20 @@ export function Home() {
   const contactCategories = [
     {
       title: "大家様・オーナー様",
-      description: "賃貸管理の内容や管理開始までの流れを分かりやすくご紹介しています",
-      href: "/owner",
+      description: "賃貸管理の方法や契約内容など小さなことでもご相談できます",
+      href: "/owner/contact",
       color: "bg-white",
     },
     {
-      title: "入居者様",
-      description: "不具合連絡・退去申し込み・契約内容の変更、更新など",
-      href: "/tenant",
+      title: "個人の入居者様",
+      description: "物件の確認や空室情報など小さなことでもご相談できます",
+      href: "/tarent/contact",
       color: "bg-white",
     },
     {
-      title: "仲介業者様",
-      description: "申請書ダウンロードや物件確認、必要書類など",
-      href: "/agency",
+      title: "法人契約の入居者様",
+      description: "物件の確認や空室情報など小さなことでもご相談できます",
+      href: "/coporate/contact",
       color: "bg-white",
     },
   ];
@@ -103,63 +103,76 @@ export function Home() {
         <div className="mx-auto w-full grid lg:grid-cols-[360px_1fr] gap-10 xl:px-20 lg:px-10 md:px-6 px-4">
 
           {/* 左側 */}
-          <div className="flex flex-col justify-center ">
+          <div className="flex flex-col justify-center lg:order-1  order-2 ">
 
             {/* ロゴ */}
-            <div className="mb-6">
-              <h2 className="text-2xl font-semibold text-green-700  mx-auto">
+            <div className="mb-6 lg:-mt-0 -mt-25">
+              <h2 className="mx-auto mb-6 relative z-20">
                 {/*<img src="./img/aichitatemono-img.png" alt="ロゴ" className="w-[50%] mx-auto" />*/}
-                <img src="./img/aichitatemono-logo3.png" alt="株式会社"className="w-[40%] mx-auto mb-2"/>
-                <img src="./img/aichitatemono-logo2.png" alt="あいち建物管理" className="w-[80%] mx-auto"/>
+                <img src="./img/aichitatemono-logo3.png" alt="株式会社"className="lg:w-[40%] w-[30%] mx-auto mb-2"/>
+                <img src="./img/aichitatemono-logo2.png" alt="あいち建物管理" className="lg:w-[80%] w-[70%] mx-auto"/>
               </h2>
+              <div className="grid grid-cols-2 lg:grid lg:grid-cols-1">
+                <p className="text-md lg:text-lg text-primary text-center mb-4">賃貸住宅管理業登録番号<br/>国土交通大臣(2)第810000号</p>
+                <p className="text-md lg:text-lg text-primary text-center lg:mb-2">宅建番号<br/>愛知県知事(3)第114514号</p>
+              </div>
             </div>
-            <p className="text-lg text-primary text-center mb-2">特許番号 0000号</p>
-            <p className="text-lg text-primary text-center mb-4">特許番号 0000号</p>
 
             {/* メニューカード */}
             <div className="grid grid-cols-2 gap-4 mb-8">
 
-              <a href="/owner" className="bg-white rounded-xl shadow p-4 text-center">
+              <a href="/owner" className="bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
                 <img src="./img/家主.png" alt="" className="mb-2  h-[40px] mx-auto" />
                 <p className="text-md text-primary">大家様<br/>はこちら</p>
               </a>
 
-              <a href="/tenant" className="bg-white rounded-xl shadow p-4 text-center">
+              <a href="/tenant" className="bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
                 <img src="./img/個人入居者.png" alt="" className="mb-2 h-[40px] mx-auto" />
                 <p className="text-md text-primary">入居者様<br/>はこちら</p>
               </a>
 
-              <a href="/corporate" className="bg-white rounded-xl shadow p-4 text-center">
+              <a href="/agency" className="bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
                 <img src="./img/法人.png" alt="" className="mb-2 h-[40px] mx-auto" />
                 <p className="text-md text-primary">仲介業者様<br/>はこちら</p>
               </a>
 
-              <a href="/company" className="bg-white rounded-xl shadow p-4 text-center">
-                <img src="./img/会社概要.png" alt="" className="mb-2 h-[40px] mx-auto" />
+              <a href="/company" className="bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
+                <img src="./img/会社概要.png" alt="" className="mb-4 h-[40px] mx-auto" />
                 <p className="text-md text-primary">会社概要</p>
               </a>
 
+                {/* 電話 */}
+                <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-primary rounded-xl hover:bg-primary/90">
+                  <span className="text-mb text-white">✆</span>
+                  <span className="text-mb text-white">0564-00-0000</span>
+                </a>
+
+                {/* メール */}
+                <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-secondary rounded-xl hover:bg-secondary/90">
+                  <span className="text-mb text-white">✉</span>
+                  <span className="text-mb text-white">info@example.com</span>
+                </a>
             </div>
           </div>
 
 
           {/* 右側 */}
-          <div className="flex flex-col justify-center pt-12">
+          <div className="flex flex-col justify-center pt-12 lg:order-2 order-1">
 
             {/* キャッチコピー */}
-            <h1 className="z-1 text-4xl md:text-5xl font-bold text-primary leading-18 mb-2 tracking-widest">
+            <h1 className="z-15 text-3xl md:text-5xl font-bold text-primary leading-12 lg:leading-18 mb-2 tracking-widest">
               大家様の大切な資産に
               <br />
               誠実に向き合う
             </h1>
 
             {/* 英語コピー */}
-            <p className="text-primary  text-md mb-8 z-1 en">
+            <p className="text-primary  text-md mb-8 z-15 en">
               Trust and Integrity for Your Property Assets.
             </p>
 
             {/* 画像 */}
-            <div className="relative rounded-3xl overflow-hidden -mt-56 h-[650px]">
+            <div className="relative rounded-3xl overflow-hidden -mt-54 h-[650px] z-10">
 
             {images.map((img, i) => (
             <img
@@ -218,12 +231,12 @@ export function Home() {
           <h2 className="text-3xl tracking-widest font-bold mb-8 text-secondary">| 私たちについて |</h2>
 
           {/* 賃貸管理で大切にしていること */}
-          <h2 className="text-4xl text-primary mb-8 leading-[1.5em] font-bold">
+          <h2 className="text-3xl lg:text-4xl text-primary mb-8 leading-[1.5em] font-bold px-6">
             大家様、入居者様双方が<br/>安心して利用できる賃貸管理
           </h2>
 
           {/* 私たちの取り組み（3行＋3行＋1行） */}
-          <div className="text-center text-lg space-y-4 leading-[2em]">
+          <div className="text-center text-lg space-y-4 lg:leading-[2em] px-6">
             {/* 1行目 */}
             <p>
               迅速なトラブル対応を行い、入居者様の不安をすぐに解消します。<br/>
@@ -236,7 +249,7 @@ export function Home() {
 
       {/* 経営理念 */}
       <div className="bg-blue-50 absolute  w-full h-full pb-16 z-1"> </div>
-      <section className="relative  bg-[url('/img/bg-house03.svg')] bg-cover  bg-no-repeat -mt-115  pt-120 pb-120 ml-6 mr-0 z-20">
+      <section className="relative  bg-[url('/img/bg-house03.svg')] bg-cover  bg-no-repeat -mt-170 lg:-mt-145  pt-120 pb-120 lg:ml-6 mr-0 z-20">
       <div className="relative   max-w-7xl mx-auto px-4 text-center pt-40">
         {/* タイトル */}
       <div className="flex flex-col items-center">
@@ -256,27 +269,27 @@ export function Home() {
           {/* 1つ目 */}
           <div className="flex-1 text-center">
             <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
-            <p className="text-primary text-xl font-semibold mb-8">＊＊＊＊＊＊＊＊＊＊＊</p>
+            <p className="text-primary text-xl font-semibold mb-8">「信頼でつながる賃貸管理」</p>
             <p className="text-black tracking-wide text-md leading-[1.7em]">
-              オーナー様の立場に立った建物管理を心がけています。入居率の維持や建物価値の向上を考え、長期的に安心できる管理サービスをご提供いたします。
+              私たちはオーナー様の資産価値を守り、入居者様の安心な暮らしを支え、地域に長く愛される住まいを創り続けます。誠実な管理と確かな提案で、不動産の未来を育てていきます。
             </p>
           </div>
 
           {/* 2つ目 */}
           <div className=" flex-1 text-center">
             <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
-            <p className="text-primary text-xl font-semibold mb-8">＊＊＊＊＊＊＊＊＊＊</p>
+            <p className="text-primary text-xl font-semibold mb-8">「地域の暮らしを支える住まいのパートナー」</p>
             <p className="text-black tracking-wide leading-[1.7em]">
-              入居者様からのトラブルや設備不具合などのご連絡に、24時間体制で対応いたします。急なトラブルにも迅速に対応し、入居者様とオーナー様の安心を支えます。
+              私たちはオーナー様の大切な資産を守りながら、入居者様に安心できる住環境を提供し、地域の暮らしをより豊かにする賃貸管理を行います。住まいを通して地域の価値を高め続けます。
             </p>
           </div>
 
           {/* 3つ目 */}
           <div className="flex-1 text-center">
             <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
-            <p className="text-primary  text-xl font-semibold mb-8">＊＊＊＊＊＊＊＊＊＊</p>
+            <p className="text-primary  text-xl font-semibold mb-8">「不動産管理で価値を生み続ける」</p>
             <p className="text-black tracking-wide leading-[1.7em]">
-              賃貸管理に関するご相談は無料で承っております。管理のご検討中の方や現在の管理にお悩みの方も、お気軽にご相談ください。
+              私たちは賃貸管理を通じて資産価値を高め、人と住まいのより良い関係を創り、持続可能な地域社会の実現に貢献します。変化を恐れず、より良い管理の形を追求し続けます。
             </p>
           </div>
         </div>
@@ -291,9 +304,9 @@ export function Home() {
         </div>
       </section>
 
-      {/*賃貸管理とは？ */}
+      {/*代表挨拶 */}
       <div className="color-secondary-opacity10">
-        <section className=" relative z-30 bg-white rounded-3xl py-24 px-8 ml-20 mr-16 md:mr-0 -mt-96">
+        <section className=" relative z-30 bg-white rounded-3xl py-24 px-8 lg:ml-20 lg:mr-16 md:mr-0 -mt-96">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] z-100 gap-16 items-center">
 
             {/* 左側テキスト */}
@@ -316,7 +329,7 @@ export function Home() {
 
               <a
                 href="/owner/flow"
-                className="inline-flex justify-items-center bg-primary text-white px-8 py-3 rounded-full hover:opacity-90"
+                className="inline-flex justify-items-center bg-primary text-white px-8 py-3 rounded-full hover:opacity-90 font-bold"
               >
                 企業概要はこちら →
               </a>
@@ -332,10 +345,109 @@ export function Home() {
         </section>
       </div>
 
+      {/* 管理実績 */}
+      <section className="py-24 color-secondary-opacity10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl p-8  border-primary border-1">
+          <h2 className="text-center pt-12 pb-20 text-primary text-3xl font-bold">管理実績</h2>
+            {/* 賃貸管理項目 */}
+            <div className="flex flex-col md:flex-row justify-center gap-12 pr-6 pl-10 mb-12">
+              {/* 1つ目 */}
+              <div className="flex-1 text-center">
+                <p className="text-primary text-2xl font-semibold mb-4 text-left pl-4 border-l-2 border-secondary">岡崎市</p>
+                <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
+                <div className="text-left max-w-xs mx-auto space-y-2 text-md tracking-wide">
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">建物種類</span>
+                    <span className="font-medium text-center">マンション</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">築年数</span>
+                    <span className="font-medium text-center">築18年</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">構造</span>
+                    <span className="font-medium text-center">RC造</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr]">
+                    <span className="text-gray-500">間取り</span>
+                    <span className="font-medium text-center">1LDK〜3LDK</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 2つ目 */}
+              <div className="flex-1 text-center">
+                <p className="text-primary text-2xl font-semibold mb-4 text-left pl-4 border-l-2 border-secondary">安城市</p>
+                <img src="./img/mansion070.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
+                <div className="text-left max-w-xs mx-auto space-y-2 text-md tracking-wide">
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">建物種類</span>
+                    <span className="font-medium text-center">アパート</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">築年数</span>
+                    <span className="font-medium text-center">築23年</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">構造</span>
+                    <span className="font-medium text-center">RC造</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr]">
+                    <span className="text-gray-500">間取り</span>
+                    <span className="font-medium text-center">1LK</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 3つ目 */}
+              <div className="flex-1 text-center">
+                <p className="text-primary text-2xl font-bold mb-4 text-left pl-4 border-l-2 border-secondary">豊橋市</p>
+                <img src="./img/mansion047.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
+                <div className="text-left max-w-xs mx-auto space-y-2 text-md tracking-wide">
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">建物種類</span>
+                    <span className="font-medium text-center">コーポ</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">築年数</span>
+                    <span className="font-medium text-center">築7年</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr] border-b pb-1">
+                    <span className="text-gray-500">構造</span>
+                    <span className="font-medium text-center">RC造</span>
+                  </div>
+
+                  <div className="grid grid-cols-[1fr_2fr]">
+                    <span className="text-gray-500">間取り</span>
+                    <span className="font-medium text-center">1LDK</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="text-center">
+              <a href="./company" className="inline-block mt-12 mb-12 bg-primary text-white font-semibold py-4 px-16 rounded-full hover:bg-primary/85 transition">
+                詳しくはこちら →
+              </a>
+            </div>         
+          </div>
+        </div>
+      </section>
+
       {/* お問い合わせ */}
       <section className="py-24 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center mb-12 text-3xl md:text-md">お問い合わせはこちら</h2>
+          <h2 className="text-center mb-12 text-3xl md:text-md"></h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactCategories.map((category, index) => (
               <Link
@@ -357,6 +469,7 @@ export function Home() {
           </div>
         </div>
       </section>
+
     </div>
 
   );
