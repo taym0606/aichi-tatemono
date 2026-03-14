@@ -38,6 +38,21 @@ export function OwnerService() {
     <div className="header-margin">
       <div className="bg-primary text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl py-4 text-m text-left">
+              <Link to="/" className=" hover:underline">
+                トップページ
+              </Link>
+              <span className="mx-2">&gt;</span>
+
+              <Link to="/owner" className=" hover:underline">
+                大家様向けサービス
+              </Link>
+              <span className="mx-2">&gt;</span>
+
+              <span className="text-gray-900">
+                賃貸管理サービスとは
+              </span>
+            </div>
           <h1 className="text-white mb-4">賃貸管理サービス</h1>
           <p className="text-lg opacity-90">
             オーナー様の大切な資産を守り、収益を最大化するサービスを提供します

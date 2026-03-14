@@ -119,27 +119,27 @@ export function Home() {
             </div>
 
             {/* メニューカード */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="grid grid-cols-2 gap-4 mb-8">
 
-              <a href="/owner" className="bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
-                <img src="./img/家主.png" alt="" className="mb-2  h-[40px] mx-auto" />
-                <p className="text-md text-primary">大家様<br/>はこちら</p>
-              </a>
+                  <a href="/owner" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
+                    <img src="./img/家主.png" alt="" className="mb-2 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-md text-primary">大家様<br/>はこちら</p>
+                  </a>
 
-              <a href="/tenant" className="bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
-                <img src="./img/個人入居者.png" alt="" className="mb-2 h-[40px] mx-auto" />
-                <p className="text-md text-primary">入居者様<br/>はこちら</p>
-              </a>
+                  <a href="/tenant" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
+                    <img src="./img/個人入居者.png" alt="" className="mb-2 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-md text-primary">入居者様<br/>はこちら</p>
+                  </a>
 
-              <a href="/agency" className="bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
-                <img src="./img/法人.png" alt="" className="mb-2 h-[40px] mx-auto" />
-                <p className="text-md text-primary">仲介業者様<br/>はこちら</p>
-              </a>
+                  <a href="/agency" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
+                    <img src="./img/法人.png" alt="" className="mb-2 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-md text-primary">仲介業者様<br/>はこちら</p>
+                  </a>
 
-              <a href="/company" className="bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
-                <img src="./img/会社概要.png" alt="" className="mb-5 h-[40px] mx-auto" />
-                <p className="text-md text-primary">会社概要</p>
-              </a>
+                  <a href="/company" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
+                    <img src="./img/会社概要.png" alt="" className="mb-5 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-md text-primary">会社概要</p>
+                  </a>
 
                 {/* 電話 */}
                 <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-primary rounded-xl hover:bg-primary/90">
@@ -152,8 +152,8 @@ export function Home() {
                   <Mail className="h-5 w-5 text-white shrink-0" />
                   <span className="text-mb text-white">info@example.com</span>
                 </a>
+                </div>
             </div>
-          </div>
 
 
           {/* 右側 */}
@@ -335,7 +335,7 @@ export function Home() {
               </p>
 
               <a
-                href="/owner/flow"
+                href="/company"
                 className="inline-flex justify-items-center bg-primary text-white px-8 py-3 rounded-full hover:opacity-90 font-bold"
               >
                 企業概要はこちら →
@@ -481,3 +481,4 @@ export function Home() {
 
   );
 }
+

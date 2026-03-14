@@ -90,13 +90,15 @@ export const router = createBrowserRouter([
         element: <ContactForm title="退去申し込み" category="個人入居者様" />,
       },
       {
-        path: 'tenant/faq',
-        element: <FAQ title="よくある質問" category="個人入居者様" questions={tenantFAQs} />,
+        path: 'tenant/change',
+        element: <ContactForm title="契約変更" category="個人入居者様"/>,
       },
       {
         path: 'tenant/contact',
         element: <ContactForm title="お問い合わせ" category="個人入居者様" />,
       },
+      {path: 'agency', Component: AgencyIndex},
+
       
       // 法人契約のお客様
       { path: 'corporate', Component: CorporateIndex },
@@ -115,115 +117,6 @@ export const router = createBrowserRouter([
       {
         path: 'corporate/contact',
         element: <ContactForm title="お問い合わせ" category="法人契約のお客様" />,
-      },
-      // 仲介業者様向け
-      { path: 'agency', Component: AgencyIndex },
-      {
-        path: 'agency/property',
-        element: (
-          <div className="py-16">
-            <div className="bg-primary text-white py-16">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 className="text-white">物件確認</h1>
-              </div>
-            </div>
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-              <p className="text-center text-gray-600 mb-8">
-                物件情報の確認は専用システムをご利用ください。<br />
-                ログインIDをお持ちでない場合は、お問い合わせください。
-              </p>
-              <div className="text-center">
-                <a
-                  href="#"
-                  className="inline-flex items-center px-8 py-4 bg-primary text-white hover:bg-primary/90 transition-colors rounded-lg"
-                >
-                  専用システムへログイン
-                </a>
-              </div>
-            </div>
-          </div>
-        ),
-      },
-      {
-        path: 'agency/download',
-        element: (
-          <div className="py-16">
-            <div className="bg-primary text-white py-16">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 className="text-white">申込書ダウンロード</h1>
-              </div>
-            </div>
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-              <div className="space-y-4">
-                <div className="bg-white p-6 rounded-lg shadow-md flex items-center justify-between">
-                  <div>
-                    <h3 className="mb-2">入居申込書</h3>
-                    <p className="text-sm text-gray-600">PDF形式 / 200KB</p>
-                  </div>
-                  <button className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
-                    ダウンロード
-                  </button>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-md flex items-center justify-between">
-                  <div>
-                    <h3 className="mb-2">重要事項説明書</h3>
-                    <p className="text-sm text-gray-600">PDF形式 / 350KB</p>
-                  </div>
-                  <button className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
-                    ダウンロード
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        ),
-      },
-      {
-        path: 'agency/documents',
-        element: (
-          <div className="py-16">
-            <div className="bg-primary text-white py-16">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 className="text-white">必要書類</h1>
-              </div>
-            </div>
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="mb-6">入居審査に必要な書類</h3>
-                <ul className="space-y-4 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0 mt-0.5">
-                      1
-                    </span>
-                    <span>入居申込書（所定の書式）</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0 mt-0.5">
-                      2
-                    </span>
-                    <span>本人確認書類（運転免許証、健康保険証など）</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0 mt-0.5">
-                      3
-                    </span>
-                    <span>収入証明書（源泉徴収票、給与明細など）</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 flex-shrink-0 mt-0.5">
-                      4
-                    </span>
-                    <span>連帯保証人の承諾書（保証会社利用の場合は不要）</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        ),
-      },
-      {
-        path: 'agency/contact',
-        element: <ContactForm title="お問い合わせ" category="仲介業者様向け" />,
       },
       // その他
       { path: 'performance', Component: Performance },

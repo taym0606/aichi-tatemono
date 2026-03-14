@@ -1,4 +1,5 @@
 import { CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function OwnerFlow() {
   const steps = [
@@ -45,6 +46,21 @@ export function OwnerFlow() {
     <div className="header-margin">
       <div className="bg-primary text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className=" py-4 text-m text-left">
+              <Link to="/" className=" hover:underline">
+                トップページ
+              </Link>
+              <span className="mx-2">&gt;</span>
+
+              <Link to="/owner" className=" hover:underline">
+                大家様向けサービス
+              </Link>
+              <span className="mx-2">&gt;</span>
+
+              <span className="text-gray-900">
+                賃貸管理の流れ
+              </span>
+            </div>
           <h1 className="text-white mb-4">管理の流れ</h1>
           <p className="text-lg opacity-90">
             お問い合わせから管理開始までの流れをご説明します

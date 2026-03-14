@@ -1,8 +1,18 @@
+import { Link } from 'react-router-dom';
 export function Privacy() {
   return (
     <div className="header-margin">
       <div className="bg-primary text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl py-4 text-m text-left">
+              <Link to="/" className=" hover:underline">
+                トップページ
+              </Link>
+              <span className="mx-2">&gt;</span>
+              <span className="text-gray-900">
+                プライバシーポリシー
+              </span>
+            </div>
           <h1 className="text-white">プライバシーポリシー</h1>
         </div>
       </div>

@@ -26,6 +26,19 @@ export function OwnerIndex() {
   return (
         <div className='header-margin bg-gray-50'>
           <div className="flex flex-col justify-center pt-12 lg:order-2 order-1 px-6 lg:px-12">
+            <div className="max-w-7xl py-4 text-md text-gray-500 text-left">
+
+              <Link to="/" className="hover:text-primary hover:underline">
+                トップページ
+              </Link>
+
+              <span className="mx-2">&gt;</span>
+
+              <span className="text-gray-700">
+                大家様向けサービス
+              </span>
+
+            </div>
 
             {/* キャッチコピー */}
             <h1 className="z-15 text-3xl md:text-5xl font-bold text-primary leading-12 lg:leading-18 mb-2 tracking-widest">
