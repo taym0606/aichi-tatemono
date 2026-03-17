@@ -12,8 +12,8 @@ export function Header() {
   const [hasFirstView, setHasFirstView] = useState(false);
 
   const navigation = [
-    {name: '入居者様向けサービス',href: '/tenant',},
     {name: '大家様向けサービス',href: '/owner',},
+    {name: '入居者様向けサービス',href: '/tenant',},
     {name: '仲介業者様向けサービス',href: '/agency',},
     {name: '会社概要' ,href: '/company',},
   ];

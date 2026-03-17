@@ -112,14 +112,10 @@ export function Home() {
                 <img src="./img/aichitatemono-logo3.png" alt="株式会社"className="lg:w-[40%] w-[30%] mx-auto mb-2"/>
                 <img src="./img/aichitatemono-logo2.png" alt="あいち建物管理" className="lg:w-[80%] w-[70%] mx-auto"/>
               </h2>
-              <div className="grid grid-cols-2 lg:grid lg:grid-cols-1">
-                <p className="text-md lg:text-lg text-primary text-center mb-2">賃貸住宅管理業登録番号<br/>国土交通大臣(2)第810000号</p>
-                <p className="text-md lg:text-lg text-primary text-center lg:mb-2">宅建番号<br/>愛知県知事(3)第114514号</p>
-              </div>
             </div>
 
             {/* メニューカード */}
-                <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="grid grid-cols-2 gap-2 mb-8">
 
                   <a href="/owner" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
                     <img src="./img/家主.png" alt="" className="mb-2 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
@@ -142,17 +138,21 @@ export function Home() {
                   </a>
 
                 {/* 電話 */}
-                <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-primary rounded-xl hover:bg-primary/90">
+                <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-primary rounded-xl hover:bg-primary/90 mt-2">
                   <Phone className="h-5 w-5 text-white shrink-0" />
                   <span className="text-mb text-white">0564-00-0000</span>
                 </a>
 
                 {/* メール */}
-                <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-secondary rounded-xl hover:bg-secondary/90">
+                <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-secondary rounded-xl hover:bg-secondary/90 mt-2">
                   <Mail className="h-5 w-5 text-white shrink-0" />
                   <span className="text-mb text-white">info@example.com</span>
                 </a>
                 </div>
+              <div className="grid grid-cols-2 lg:grid lg:grid-cols-1">
+                <p className="text-md lg:text-lg text-primary text-center mb-2">賃貸住宅管理業登録番号<br/>国土交通大臣(2)第810000号</p>
+                <p className="text-md lg:text-lg text-primary text-center lg:mb-2">宅建番号<br/>愛知県知事(3)第114514号</p>
+              </div>
             </div>
 
 
@@ -160,7 +160,7 @@ export function Home() {
           <div className="flex flex-col justify-center pt-12 lg:order-2 order-1">
 
             {/* キャッチコピー */}
-            <h1 className="z-15 text-3xl md:text-5xl font-bold text-primary leading-12 lg:leading-18 mb-2 tracking-widest">
+            <h1 className="z-15 text-3xl md:text-5xl font-bold text-primary leading-12 lg:leading-14 mb-2 tracking-widest">
               大家様の大切な資産に
               <br />
               誠実に向き合う
@@ -172,7 +172,7 @@ export function Home() {
             </p>
 
             {/* 画像 */}
-            <div className="relative rounded-3xl overflow-hidden -mt-54 h-[650px] z-10">
+            <div className="relative rounded-3xl overflow-hidden -mt-42 h-[650px] z-10">
 
             {images.map((img, i) => (
             <img
@@ -196,7 +196,7 @@ export function Home() {
       {/* お知らせ */}
       <section className="py-24  pb-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center mb-12 text-3xl">お知らせ</h2>
+          <h2 className="text-center mb-12 text-3xl font-bold text-primary">お知らせ</h2>
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               {announcements.map((announcement, index) => (
@@ -257,7 +257,7 @@ export function Home() {
       {/* 経営理念 */}
       <div className="bg-blue-50 absolute  w-full h-full pb-16 z-1"> </div>
       <section className="relative  bg-[url('/img/bg-house03-mobile.svg')] md:bg-[url('/img/bg-house03.svg')] bg-cover  bg-no-repeat -mt-110 lg:-mt-135  pt-100 pb-110 lg:ml-6 mr-0 z-20">
-      <div className="relative   max-w-7xl mx-auto px-4 text-center pt-30 md:pt-50 ">
+      <div className="relative   max-w-7xl mx-auto px-4 text-center pt-10 md:pt-50 ">
         {/* タイトル */}
       <div className="flex flex-col items-center">
         <img
@@ -266,13 +266,13 @@ export function Home() {
           className="w-[60px] mb-6"
         />
 
-        <h2 className="text-3xl font-bold text-primary mb-24">
+        <h2 className="text-3xl font-bold text-primary mb-12">
           経営理念
         </h2>
       </div>
 
         {/* 3つの強み */}
-        <div className="flex flex-col md:flex-row justify-center gap-10 pr-6 pl-10">
+        <div className="flex flex-col md:flex-row justify-center gap-10 pr-12 pl-18">
           {/* 1つ目 */}
           <div className="flex-1 text-center">
             <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />
@@ -304,7 +304,7 @@ export function Home() {
         {/* ボタン */}
         <a
           href="./company"
-          className="inline-block mt-12 bg-primary text-white font-semibold py-4 px-16 rounded-full hover:bg-primary/85 transition"
+          className="inline-block mt-12 mb-18 bg-primary text-white font-semibold py-4 px-16 rounded-full hover:bg-primary/85 transition"
         >
           詳しくはこちら →
         </a>
@@ -313,8 +313,8 @@ export function Home() {
 
       {/*代表挨拶 */}
       <div className="color-secondary-opacity10">
-        <section className=" relative z-30 bg-white rounded-3xl py-24 px-8 lg:ml-20 lg:mr-16 md:mr-0 -mt-96">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] z-100 gap-16 items-center">
+        <section className=" relative z-30 bg-white rounded-3xl py-24 px-16 lg:ml-20 lg:mr-16 md:mr-0 -mt-96">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1fr] z-100 gap-6 items-center">
 
             {/* 左側テキスト */}
             <div>
@@ -454,7 +454,7 @@ export function Home() {
       {/* お問い合わせ */}
       <section className="py-24 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center mb-12 text-3xl md:text-md"></h2>
+          <h2 className="text-center mb-16 text-3xl md:text-md">お問い合わせはこちら</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactCategories.map((category, index) => (
               <Link

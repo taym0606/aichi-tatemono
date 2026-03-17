@@ -10,7 +10,7 @@ export function Footer() {
 
           {/* リンク集 1 */}
           <div>
-            <a  href="/owner" className="mb-4 " >大家様向けサービス</a>
+            <a  href="/owner" className="mb-4 font-bold" >大家様向けサービス</a>
             <ul className="space-y-2 mt-4">
               <li>
                 <Link to="/owner/contact" className="text-sm hover:text-primary transition-colors">
@@ -32,7 +32,7 @@ export function Footer() {
           
           {/* リンク集 2 */}
           <div>
-            <a  href="/tenant" className="mb-4 ">入居者様向けサービス</a>
+            <a  href="/tenant" className="mb-4 font-bold ">入居者様向けサービス</a>
             <ul className="space-y-2 mt-4">
               <li>
                 <Link to="/tenant/contact" className="text-sm hover:text-primary transition-colors">
@@ -59,7 +59,7 @@ export function Footer() {
           
         {/* リンク集 3 */}
           <div>
-            <a  href="/agency" className="mb-4 ">仲介業者様向けサービス</a>
+            <a  href="/agency" className="mb-4 font-bold">仲介業者様向けサービス</a>
             <ul className="space-y-2 mt-4">
               <li>
                 <Link to="/agency/property" className="text-sm hover:text-primary transition-colors">
@@ -81,7 +81,7 @@ export function Footer() {
 
           {/* リンク集 4 */}
           <div>
-            <a className="mb-4 " >その他</a>
+            <a className="mb-4 font-bold" >その他</a>
             <ul className="space-y-2 mt-4">
               <li>
                 <Link to="/company" className="text-sm hover:text-primary transition-colors">
@@ -108,7 +108,7 @@ export function Footer() {
         </div>
       </div>
       <div className='px-4 sm:px-6 lg:px-8 '>
-        <h3 className="mb-4 ">会社情報</h3>
+        <h3 className="mb-4 font-bold">会社情報</h3>
           <div className="space-y-3">
             <div className="flex items-start space-x-2">
               <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />

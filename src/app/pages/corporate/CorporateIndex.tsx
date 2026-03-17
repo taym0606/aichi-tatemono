@@ -52,6 +52,29 @@ export function CorporateIndex() {
           </p>
         </div>
 
+        {/* メニューカード */}
+        <div className="grid grid-cols-2 gap-2 mb-8">
+          <a href="/owner" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
+            <img src="./img/家主.png" alt="" className="mb-2 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-md text-primary">大家様<br/>はこちら</p>
+          </a>
+
+          <a href="/tenant" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
+            <img src="./img/個人入居者.png" alt="" className="mb-2 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-md text-primary">入居者様<br/>はこちら</p>
+          </a>
+
+          <a href="/agency" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
+            <img src="./img/法人.png" alt="" className="mb-2 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-md text-primary">仲介業者様<br/>はこちら</p>
+          </a>
+
+          <a href="/company" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
+            <img src="./img/会社概要.png" alt="" className="mb-5 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-md text-primary">会社概要</p>
+          </a>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <Link

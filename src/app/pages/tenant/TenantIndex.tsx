@@ -2,32 +2,6 @@ import { Link } from 'react-router-dom';
 import { AlertCircle, LogOut, FileEdit, Mail } from 'lucide-react';
 
 export function TenantIndex() {
-  const services = [
-    {
-      title: 'お問い合わせ',
-      description: '物件探しや空室確認、その他ご質問はこちらから',
-      href: '/tenant/contact',
-      icon: Mail,
-    },
-    {
-      title: '不具合連絡',
-      description: '設備の故障や不具合がございましたらこちらからご連絡ください',
-      href: '/tenant/issue',
-      icon: AlertCircle,
-    },
-    {
-      title: '契約内容の変更・更新・確認',
-      description: '契約内容についてはこちらからご連絡ください',
-      href: '/tenant/change',
-      icon: FileEdit,
-    },
-    {
-      title: '退去申し込み',
-      description: '退去のお手続きはこちらから',
-      href: '/tenant/move-out',
-      icon: LogOut,
-    },
-  ];
 
   return (
     <div className='header-margin bg-gray-50'>
@@ -63,23 +37,33 @@ export function TenantIndex() {
 
           </div>
 
-        <p className='text-primary text-center text-3xl mt-24 mb-12'>お問い合わせはこちら</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8  mb-24 lg:px-12 ">
-          {services.map((service, index) => (
-            <Link
-              key={index}
-              to={service.href}
-              className="bg-white p-8 rounded-lg hover:bg-secondary/20 group text-gray-600 hover:text-primary transition-colors text-center"
-            >
-              <div className="w-12 h-12 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-foreground transition-colors">
-                <service.icon className="h-6 w-6" />
-              </div>
-              <div >
-                <h3 className="mb-3 text-xl">{service.title}</h3>
-                <p className="text-md ">{service.description}</p>
-              </div>
-            </Link>
-          ))}
+        {/* メニューカード */}
+
+        <p className='text-primary text-center text-3xl mt-24 mb-12'>お問い合わせ</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+          <a href="/tenant/contact" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition ">
+            <img src="./img/flow1.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-2xl text-primary py-2">お問い合わせ</p>
+            <p className="text-md text-gray-500">ご相談やその他ご質問はこちら</p>
+          </a>
+
+          <a href="/tenant/issue" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
+            <img src="./img/不具合.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-xl text-primary py-2">不具合連絡</p>
+            <p className="text-md text-gray-500">設備の故障や不具合がございましたらこちらからご連絡ください</p>
+          </a>
+
+          <a href="/tenant/change" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
+            <img src="./img/契約の更新.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-xl text-primary py-2">ご契約の変更・更新・確認</p>
+            <p className="text-md text-gray-500">契約内容のに関するお手続きはこちらから</p>
+          </a>
+
+          <a href="/tenant/move-out" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
+            <img src="./img/退去.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-xl text-primary py-2">退去手続き</p>
+            <p className="text-md text-gray-500">契約解約のお手続きはこちらから</p>
+          </a>
         </div>
       </div>
     </div>

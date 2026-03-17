@@ -2,26 +2,6 @@ import { Link } from 'react-router-dom';
 import { Building2, ArrowRight, TrendingUp, Shield, Users } from 'lucide-react';
 
 export function OwnerIndex() {
-  const services = [
-    {
-      title: '賃貸管理サービス',
-      description: '入居者募集から建物管理まで、トータルサポート',
-      href: '/owner/service',
-      icon: Building2,
-    },
-    {
-      title: '管理の流れ',
-      description: '契約から管理開始までの流れをご説明',
-      href: '/owner/flow',
-      icon: ArrowRight,
-    },
-    {
-      title: '管理実績',
-      description: 'すべてのお客様に満足いただける管理を目指しています',
-      href: '/performance',
-      icon: ArrowRight,
-    },
-  ];
 
   return (
         <div className='header-margin bg-gray-50'>
@@ -58,24 +38,24 @@ export function OwnerIndex() {
 
         <section className="mb-16">
           <h2 className="text-center mb-12 text-3xl font-bold text-primary mt-24">サービス一覧</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Link
-                key={index}
-                to={service.href}
-                className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
-              >
-                <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-                  <service.icon className="h-6 w-6" />
-                </div>
-                <h3 className="mb-3">{service.title}</h3>
-                <p className="text-sm text-gray-600 mb-4">{service.description}</p>
-                <div className="text-primary flex items-center text-sm group-hover:underline">
-                  詳しく見る
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </div>
-              </Link>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
+            <a href="/owner/service" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition ">
+              <img src="./img/flow1.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+              <p className="text-2xl text-primary py-2">賃貸管理サービス</p>
+              <p className="text-md text-gray-500">賃貸管理サービスはどのようなものがあるか、どんなプランがあるかご紹介</p>
+            </a>
+
+            <a href="/owner/flow" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
+              <img src="./img/不具合.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+              <p className="text-xl text-primary py-2">賃貸管理の流れ</p>
+              <p className="text-md text-gray-500">ご相談から契約、管理開始までの流れをご紹介します</p>
+            </a>
+
+            <a href="/performance" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
+              <img src="./img/契約の更新.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+              <p className="text-xl text-primary py-2">管理実績</p>
+              <p className="text-md text-gray-500">契約内容のに関するお手続きはこちらから</p>
+            </a>
           </div>
         </section>
 

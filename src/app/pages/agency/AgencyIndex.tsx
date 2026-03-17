@@ -2,26 +2,6 @@ import { Link } from 'react-router-dom';
 import { Building2, Download, FileText, Mail } from 'lucide-react';
 
 export function AgencyIndex() {
-  const services = [
-    {
-      title: '物件確認',
-      description: '管理物件の空室状況や詳細情報の確認',
-      href: '#property',
-      icon: Building2,
-    },
-    {
-      title: '申込書ダウンロード',
-      description: '入居申込書などの各種書類のダウンロード',
-      href: '#applications',
-      icon: Download,
-    },
-    {
-      title: '必要書類',
-      description: '入居審査に必要な書類のご案内',
-      href: '#documents',
-      icon: FileText,
-    },
-  ];
 
   return (
     <div className="header-margin">
@@ -66,22 +46,7 @@ export function AgencyIndex() {
             Email: <span className="text-primary">agency@example.com</span>
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-12">
-          {services.map((service, index) => (
-            <Link
-              key={index}
-              to={service.href}
-              className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
-            >
-              <div className="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-                <service.icon className="h-6 w-6" />
-              </div>
-              <h3 className="mb-3">{service.title}</h3>
-              <p className="text-sm text-gray-600">{service.description}</p>
-            </Link>
-          ))}
-        </div>
+        
         {/* 物件確認セクション */}
           <div className="py-16" id="property">
             <div className="bg-primary text-white py-16">
