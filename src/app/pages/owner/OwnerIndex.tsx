@@ -46,7 +46,7 @@ export function OwnerIndex() {
             </a>
 
             <a href="/owner/flow" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
-              <img src="./img/不具合.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+              <img src="./img/賃貸管理の流れ.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
               <p className="text-xl text-primary py-2">賃貸管理の流れ</p>
               <p className="text-md text-gray-500">ご相談から契約、管理開始までの流れをご紹介します</p>
             </a>
