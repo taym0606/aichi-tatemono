@@ -39,29 +39,58 @@ export function TenantIndex() {
 
         {/* メニューカード */}
 
-        <p className='text-primary text-center text-3xl mt-24 mb-12'>お問い合わせ</p>
+        <p className='text-primary text-center font-bold text-3xl mt-24 mb-12'>お問い合わせ</p>
+        <p className='text-secondary text-center  font-bold text-4xl mt-12 mb-12'>個人の入居者様はこちらから</p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
-          <a href="/tenant/contact" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition ">
+          <a href="/tenant/contact" className="group bg-white rounded-xl border-secondary border p-4 text-center hover:scale-105 transition ">
+            <img src="./img/flow1.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-2xl text-secondary py-2">お問い合わせ</p>
+            <p className="text-md text-gray-500">ご相談やその他ご質問はこちら</p>
+          </a>
+
+          <a href="/tenant/issue" className="group bg-white rounded-xl border-secondary border p-4 text-center hover:scale-105 transition">
+            <img src="./img/不具合.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-xl text-secondary py-2">不具合連絡</p>
+            <p className="text-md text-gray-500">設備の故障や不具合がございましたらこちらからご連絡ください</p>
+          </a>
+
+          <a href="/tenant/change" className="group bg-white rounded-xl border-secondary border p-4 text-center hover:scale-105 transition">
+            <img src="./img/契約の更新.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-xl text-secondary py-2">ご契約の変更・更新・確認</p>
+            <p className="text-md text-gray-500">契約内容のに関するお手続きはこちらから</p>
+          </a>
+
+          <a href="/tenant/move-out" className="group bg-white rounded-xl border-secondary border p-4 text-center hover:scale-105 transition">
+            <img src="./img/退去.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+            <p className="text-xl text-secondary py-2">退去手続き</p>
+            <p className="text-md text-gray-500">契約解約のお手続きはこちらから</p>
+          </a>
+        </div>
+
+
+        <p className='text-primary text-center font-bold text-4xl mt-24 mb-12'>法人契約の入居者様はこちらから</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-24">
+          <a href="/corporate/contact" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition ">
             <img src="./img/flow1.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
             <p className="text-2xl text-primary py-2">お問い合わせ</p>
             <p className="text-md text-gray-500">ご相談やその他ご質問はこちら</p>
           </a>
 
-          <a href="/tenant/issue" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
+          <a href="/corporate/issue" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
             <img src="./img/不具合.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
             <p className="text-xl text-primary py-2">不具合連絡</p>
             <p className="text-md text-gray-500">設備の故障や不具合がございましたらこちらからご連絡ください</p>
           </a>
 
-          <a href="/tenant/change" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
+          <a href="/corporate/change" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
             <img src="./img/契約の更新.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
             <p className="text-xl text-primary py-2">ご契約の変更・更新・確認</p>
             <p className="text-md text-gray-500">契約内容のに関するお手続きはこちらから</p>
           </a>
 
-          <a href="/tenant/move-out" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
+          <a href="/corporate/cancellation" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
             <img src="./img/退去.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
-            <p className="text-xl text-primary py-2">退去手続き</p>
+            <p className="text-xl text-primary py-2">退去・解約手続き</p>
             <p className="text-md text-gray-500">契約解約のお手続きはこちらから</p>
           </a>
         </div>

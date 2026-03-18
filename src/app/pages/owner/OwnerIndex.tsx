@@ -53,7 +53,7 @@ export function OwnerIndex() {
 
             <a href="/performance" className="group bg-white rounded-xl border-primary border p-4 text-center hover:scale-105 transition">
               <img src="./img/契約の更新.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
-              <p className="text-xl text-primary py-2">管理実績</p>
+              <p className="text-xl text-primary py-2">賃貸管理実績</p>
               <p className="text-md text-gray-500">契約内容のに関するお手続きはこちらから</p>
             </a>
           </div>

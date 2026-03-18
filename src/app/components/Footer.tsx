@@ -24,7 +24,7 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/owner/flow" className="text-sm hover:text-primary transition-colors">
-                  管理の流れ
+                  賃貸管理の流れ
                 </Link>
               </li>
             </ul>

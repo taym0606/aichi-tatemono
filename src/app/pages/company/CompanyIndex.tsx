@@ -154,11 +154,11 @@ export function CompanyIndex() {
 
       <div className=" text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-primary">会社情報</h1>
+          <h1 className="text-primary font-bold text-3xl mx-auto text-center">会社情報</h1>
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
           <table className="w-full">
             <tbody>

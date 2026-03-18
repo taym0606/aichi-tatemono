@@ -61,7 +61,7 @@ export function AgencyIndex() {
               </p>
               <div className="text-center">
                 <a
-                  href="#"
+                  href="/a"
                   className="inline-flex items-center px-8 py-4 bg-primary text-white hover:bg-primary/90 transition-colors rounded-lg"
                 >
                   専用システムへログイン

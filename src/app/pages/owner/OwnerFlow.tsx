@@ -68,27 +68,66 @@ export function OwnerFlow() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="mb-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      {/* フロー（縦カード強化版） */}
+      <div className="mb-20">
+             <div>
+              <h2 className="text-3xl font-bold text-primary mb-3">
+                賃貸管理
+              </h2>
+
+              <p className="text-primary text-md tracking-widest mb-6">
+                PROPERTY MANAGEMENT
+              </p>
+
+              <p className="text-gray-600 leading-loose mb-18 text-md ">
+                賃貸管理とは、オーナー様に代わって入居者募集・契約手続き・
+                家賃管理・建物管理などを行い、安定した賃貸経営をサポートする
+                サービスです。あいち建物管理では、入居者対応から建物の維持管理
+                まで幅広くサポートし、オーナー様が安心して賃貸経営を行える環境
+                を整えています。
+              </p>
+        </div>
+        <div className="relative max-w-3xl mx-auto">
+
           {steps.map((step, index) => (
-            <div key={index} className="relative mb-12 last:mb-0">
-              {index < steps.length - 1 && (
-                <div className="absolute left-8 top-20 bottom-0 w-0.5 bg-gray-200 -mb-12" />
-              )}
-              <div className="flex items-start space-x-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center relative z-10">
-                    <span className="text-xl">{step.number}</span>
+                <div key={index} className="relative flex items-start mb-20 -ml-10">
+                  {/* 縦ライン（最後以外だけ表示） */}
+                  {index !== steps.length - 1 && (
+                    <div className="absolute left-8 top-10 lg:left-12 lg:top-20 h-full w-1 bg-primary/20 mt-2"></div>
+                  )}
+
+                  {/* アイコン（でかく） */}
+                  <div className="z-10 flex-shrink-0">
+                    <div className="w-24 h-24 lg:w-32 lg:h-32 -mt-10 -ml-4 bg-primary rounded-full flex items-center justify-center shadow-md border border-primary/20">
+                      <img
+                        src={`/img/flow${index + 1}.png`}
+                        className="lg:w-18 lg:h-18 w-10 h-10 object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  {/* カード */}
+                  <div className="relative ml-20 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition w-full border border-gray-100">
+
+                    {/* 番号（完全な丸） */}
+                    <div className="absolute -top-6 -left-6 w-14 h-14 bg-secondary text-white rounded-full flex items-center justify-center text-xl font-bold shadow">
+                      {step.number}
+                    </div>
+
+                    <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                      {step.title}
+                    </h3>
+
+                    <p className="text-gray-600 text-md leading-relaxed">
+                      {step.description}
+                    </p>
+
                   </div>
                 </div>
-                <div className="flex-1 bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="mb-3">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+              ))}
         </div>
+      </div>
 
         <div className="bg-gray-50 p-8 rounded-lg mb-12">
           <h2 className="mb-6 text-center">安心のポイント</h2>
@@ -110,92 +149,6 @@ export function OwnerFlow() {
             お急ぎの場合はご相談ください。
           </p>
         </div>
-      </div>
-
-
-
-
-            {/*賃貸管理とは？ */}
-      <div className="color-secondary-opacity10">
-        <section className=" relative z-30 bg-white rounded-3xl py-24 px-8 ml-20 mr-16 md:mr-0 -mt-96">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_2fr] z-100 gap-16 items-center">
-
-            {/* 左側テキスト */}
-            <div>
-              <h2 className="text-3xl font-bold text-primary mb-3">
-                賃貸管理
-              </h2>
-
-              <p className="text-primary text-md tracking-widest mb-6">
-                PROPERTY MANAGEMENT
-              </p>
-
-              <p className="text-gray-600 leading-loose mb-10 text-md">
-                賃貸管理とは、オーナー様に代わって入居者募集・契約手続き・
-                家賃管理・建物管理などを行い、安定した賃貸経営をサポートする
-                サービスです。あいち建物管理では、入居者対応から建物の維持管理
-                まで幅広くサポートし、オーナー様が安心して賃貸経営を行える環境
-                を整えています。
-              </p>
-
-              <a
-                href="/owner/flow"
-                className="inline-flex justify-items-center bg-primary text-white px-8 py-3 rounded-full hover:opacity-90"
-              >
-                詳しくみる →
-              </a>
-            </div>
-
-
-            {/* 右側カード */}
-            <div className="grid grid-cols-3 gap-12">
-
-              {/* カード1 */}
-              <div className=" relative bg-primary/10 p-8 rounded-2xl text-center ">
-                <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-6 text-4xl -mt-12 -ml-12" >1</p>
-                <img src="/img/flow1.png" className="w-14 mx-auto mb-4"/>
-                <p className="font-semibold text-gray-700">お問い合わせ・ご相談</p>
-              </div>
-
-              {/* カード2 */}
-              <div className="bg-primary/10 p-8 rounded-2xl text-center ">
-                            <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-5.5 text-4xl -mt-12 -ml-12" >2</p>
-                <img src="/img/flow2.png" className="w-14 mx-auto mb-4"/>
-                <p className="font-semibold text-gray-700">物件調査・ご提案</p>
-              </div>
-
-              {/* カード3 */}
-              <div className="bg-primary/10 p-8 rounded-2xl text-center ">
-                            <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-5.5 text-4xl -mt-12 -ml-12" >3</p>
-                <img src="/img/flow3.png" className="w-14 mx-auto mb-4"/>
-                <p className="font-semibold text-gray-700">お見積り・契約内容確認</p>
-              </div>
-
-              {/* カード4 */}
-              <div className="bg-primary/10 p-8 rounded-2xl text-center">
-                            <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-5 text-4xl -mt-12 -ml-12" >4</p>
-                <img src="/img/flow4.png" className="w-14 mx-auto mb-4"/>
-                <p className="font-semibold text-gray-700">スケジュール決定・打合せ</p>
-              </div>
-              
-              {/* カード5 */}
-              <div className="bg-primary/10 p-8 rounded-2xl text-center hover:shadow-md transition">
-                            <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-5.5 text-4xl -mt-12 -ml-12" >5</p>
-                <img src="/img/flow5.png" className="w-14 mx-auto mb-4"/>
-                <p className="font-semibold text-gray-700">ご契約</p>
-              </div>
-              
-              {/* カード6 */}
-              <div className="bg-primary/10 p-8 rounded-2xl text-center hover:shadow-md transition">
-                            <p className="bg-secondary rounded-full text-white absolute pb-3 py-2 px-5 text-4xl -mt-12 -ml-12" >6</p>
-                <img src="/img/flow6.png" className="w-14 mx-auto mb-4"/>
-                <p className="font-semibold text-gray-700">管理開始準備・管理開始</p>
-              </div>
-
-            </div>
-
-          </div>
-        </section>
       </div>
     </div>
   );

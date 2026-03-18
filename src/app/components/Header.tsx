@@ -45,7 +45,7 @@ useEffect(() => {
 
   return (
     <header className={`z-50  shadow-md fixed top-0 left-0 w-full bg-white transition-all duration-300 ${showHeader ? "translate-y-0" : "-translate-y-full"}`}>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">

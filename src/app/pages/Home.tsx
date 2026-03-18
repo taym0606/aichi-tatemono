@@ -172,7 +172,7 @@ export function Home() {
             </p>
 
             {/* 画像 */}
-            <div className="relative rounded-3xl overflow-hidden -mt-42 h-[650px] z-10">
+            <div className="relative rounded-3xl overflow-hidden -mt-36 lg:-mt-30 xl:-mt-42 h-[650px] z-10">
 
             {images.map((img, i) => (
             <img
@@ -272,7 +272,7 @@ export function Home() {
       </div>
 
         {/* 3つの強み */}
-        <div className="flex flex-col md:flex-row justify-center gap-10 pr-12 pl-18">
+        <div className="flex flex-col md:flex-row justify-center gap-10 pr-6 pl-12 lg:pr-12 lg:pl-18">
           {/* 1つ目 */}
           <div className="flex-1 text-center">
             <img src="./img/mansion046.jpg" alt="" className="mx-auto mb-8 rounded-xl" />

@@ -3,38 +3,30 @@ import { Link } from 'react-router-dom';
 export function Sitemap() {
   const sections = [
     {
-      title: '会社概要',
-      links: [
-        { name: '経営理念', href: '/company/philosophy' },
-        { name: '会社情報', href: '/company/info' },
-        { name: 'アクセス', href: '/company/access' },
-      ],
-    },
-    {
       title: '大家様向け',
       links: [
         { name: '賃貸管理サービス', href: '/owner/service' },
-        { name: '管理の流れ', href: '/owner/flow' },
-        { name: 'よくある質問', href: '/owner/faq' },
+        { name: '賃貸管理の流れ', href: '/owner/flow' },
+        { name: '賃貸管理実績', href: '/performance' },
         { name: 'お問い合わせ', href: '/owner/contact' },
       ],
     },
     {
-      title: '個人入居者様',
+      title: '個人の入居者様',
       links: [
-        { name: '不具合連絡', href: '/tenant/issue' },
-        { name: '退去申し込み', href: '/tenant/move-out' },
-        { name: 'よくある質問', href: '/tenant/faq' },
         { name: 'お問い合わせ', href: '/tenant/contact' },
+        { name: '不具合連絡', href: '/tenant/issue' },
+        { name: '契約の変更・更新・確認', href: '/tenant/change' },
+        { name: '退去申し込み', href: '/tenant/move-out' },
       ],
     },
     {
-      title: '法人契約のお客様',
+      title: '法人契約の入居者様',
       links: [
-        { name: '不具合連絡', href: '/corporate/issue' },
-        { name: '解約手続き', href: '/corporate/cancellation' },
-        { name: '契約変更', href: '/corporate/change' },
         { name: 'お問い合わせ', href: '/corporate/contact' },
+        { name: '不具合連絡', href: '/corporate/issue' },
+        { name: '契約変更・更新・確認', href: '/corporate/change' },
+        { name: '解約手続き', href: '/corporate/cancellation' },
       ],
     },
     {
@@ -43,13 +35,12 @@ export function Sitemap() {
         { name: '物件確認', href: '/agency/property' },
         { name: '申込書ダウンロード', href: '/agency/download' },
         { name: '必要書類', href: '/agency/documents' },
-        { name: 'お問い合わせ', href: '/agency/contact' },
       ],
     },
     {
       title: 'その他',
       links: [
-        { name: '管理実績', href: '/performance' },
+        { name: '会社概要', href: '/company' },
         { name: 'お問い合わせ', href: '/contact' },
         { name: 'プライバシーポリシー', href: '/privacy' },
       ],
