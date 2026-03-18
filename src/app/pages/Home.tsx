@@ -98,81 +98,21 @@ export function Home() {
   return (
     <div>
       {/* ファーストビュー */}
-      <section id="firstview" className="xl:min-h-screen bg-gray-50 flex pt-4">
+      <section className="xl:min-h-screen bg-gray-50 flex pt-4">
 
-        <div className="mx-auto w-full grid lg:grid-cols-[360px_1fr] gap-10 xl:px-20 lg:px-10 md:px-6 px-4">
-
-          {/* 左側 */}
-          <div className="flex flex-col justify-center lg:order-1  order-2 lg:pt-15 ">
-
-            {/* ロゴ */}
-            <div className="mb-6 lg:-mt-0 -mt-25">
-              <h2 className="mx-auto mb-6 relative z-20">
-                {/*<img src="./img/aichitatemono-img.png" alt="ロゴ" className="w-[50%] mx-auto" />*/}
-                <img src="./img/aichitatemono-logo3.png" alt="株式会社"className="lg:w-[40%] w-[30%] mx-auto mb-2"/>
-                <img src="./img/aichitatemono-logo2.png" alt="あいち建物管理" className="lg:w-[80%] w-[70%] mx-auto"/>
-              </h2>
-            </div>
-
-            {/* メニューカード */}
-                <div className="grid grid-cols-2 gap-2 mb-8">
-
-                  <a href="/owner" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
-                    <img src="./img/家主.png" alt="" className="mb-2 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
-                    <p className="text-md text-primary">大家様<br/>はこちら</p>
-                  </a>
-
-                  <a href="/tenant" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
-                    <img src="./img/個人入居者.png" alt="" className="mb-2 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
-                    <p className="text-md text-primary">入居者様<br/>はこちら</p>
-                  </a>
-
-                  <a href="/agency" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
-                    <img src="./img/法人.png" alt="" className="mb-2 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
-                    <p className="text-md text-primary">仲介業者様<br/>はこちら</p>
-                  </a>
-
-                  <a href="/company" className="group bg-white rounded-xl shadow p-4 text-center hover:scale-105 transition">
-                    <img src="./img/会社概要.png" alt="" className="mb-5 h-[40px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
-                    <p className="text-md text-primary">会社概要</p>
-                  </a>
-
-                {/* 電話 */}
-                <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-primary rounded-xl hover:bg-primary/90 mt-2">
-                  <Phone className="h-5 w-5 text-white shrink-0" />
-                  <span className="text-mb text-white">0564-00-0000</span>
-                </a>
-
-                {/* メール */}
-                <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-secondary rounded-xl hover:bg-secondary/90 mt-2">
-                  <Mail className="h-5 w-5 text-white shrink-0" />
-                  <span className="text-mb text-white">info@example.com</span>
-                </a>
-                </div>
-              <div className="grid grid-cols-2 lg:grid lg:grid-cols-1">
-                <p className="text-md lg:text-lg text-primary text-center mb-2">賃貸住宅管理業登録番号<br/>国土交通大臣(2)第810000号</p>
-                <p className="text-md lg:text-lg text-primary text-center lg:mb-2">宅建番号<br/>愛知県知事(3)第114514号</p>
-              </div>
-            </div>
-
-
+        <div className="mx-auto w-full  xl:px-20 lg:px-10 md:px-6 px-4 mt-10">
           {/* 右側 */}
           <div className="flex flex-col justify-center pt-12 lg:order-2 order-1">
 
             {/* キャッチコピー */}
-            <h1 className="z-15 text-3xl md:text-5xl font-bold text-primary leading-12 lg:leading-14 mb-2 tracking-widest">
-              大家様の大切な資産に
+            <h1 className="z-15  text-3xl md:text-7xl font-bold text-primary leading-12 lg:leading-22 mb-2 tracking-widest text-stroke">
+              安心と信頼の賃貸管理を作る
               <br />
-              誠実に向き合う
+              <div className="tracking-tighter">プロフェッショナル 集 団</div>
             </h1>
 
-            {/* 英語コピー */}
-            <p className="text-primary  text-md mb-8 z-15 en">
-              Trust and Integrity for Your Property Assets.
-            </p>
-
             {/* 画像 */}
-            <div className="relative rounded-3xl overflow-hidden -mt-36 lg:-mt-30 xl:-mt-42 h-[650px] z-10">
+            <div className="relative rounded-3xl overflow-hidden -mt-36 lg:-mt-30 xl:-mt-48 h-[650px] z-10">
 
             {images.map((img, i) => (
             <img
@@ -185,12 +125,33 @@ export function Home() {
                   ${i === index ? "opacity-100 animate-zoom" : "opacity-0"}
               `}
             />))}
-
           </div>
-
           </div>
-
         </div>
+      </section>
+
+
+      <section className="xl:min-h-screen bg-gray-50 flex pt-4">
+        <div className="mx-auto w-full  xl:px-20 lg:px-10 md:px-6 px-4 mt-10 ">
+          <h2 className="text-center mb-12 text-5xl font-bold text-primary leading-16"><br/>あいち建物管理が<br/>"賃貸管理"でできること</h2>
+            {/* メニューカード */}
+            <div className="grid grid-cols-3 gap-4 mb-8">
+                  <a href="/owner" className="group bg-white rounded-xl shadow-lg border-primary border-2 p-8 text-center hover:scale-105 transition">
+                    <img src="./img/家主.png" alt="" className="mb-6 h-[100px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-5xl text-primary">大家様<br/>はこちら</p>
+                  </a>
+
+                  <a href="/tenant" className="group bg-white rounded-xl  shadow-lg border-primary border-2 p-8 text-center hover:scale-105 transition">
+                    <img src="./img/個人入居者.png" alt="" className="mb-6 h-[100px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-5xl text-primary">入居者様<br/>はこちら</p>
+                  </a>
+
+                  <a href="/agency" className="group bg-white rounded-xl shadow-lg border-primary border-2 p-8 text-center hover:scale-105 transition">
+                    <img src="./img/法人.png" alt="" className="mb-6 h-[100px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-5xl text-primary">仲介業者様<br/>はこちら</p>
+                  </a>
+            </div>
+          </div>
       </section>
 
       {/* お知らせ */}
