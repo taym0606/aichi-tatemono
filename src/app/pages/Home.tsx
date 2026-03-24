@@ -98,7 +98,62 @@ export function Home() {
   return (
     <div>
       {/* ファーストビュー */}
-      <section className="xl:min-h-screen bg-gray-50 flex pt-4">
+      <section id="firstview" className="xl:min-h-screen bg-gray-50 flex pt-4 pb-24">
+
+        <div className="mx-auto w-full grid lg:grid-cols-[360px_1fr] gap-10 xl:px-20 lg:px-10 md:px-6 px-4">
+
+          {/* 左側 */}
+          <div className="flex flex-col justify-center lg:order-1  order-2 lg:pt-15 ">
+
+            {/* ロゴ */}
+            <div className="mb-6 lg:-mt-0 -mt-25">
+              <h2 className="mx-auto mb-6 relative z-20">
+                {/*<img src="./img/aichitatemono-img.png" alt="ロゴ" className="w-[50%] mx-auto" />*/}
+                <img src="./img/aichitatemono-logo3.png" alt="株式会社"className="lg:w-[40%] w-[30%] mx-auto mb-2"/>
+                <img src="./img/aichitatemono-logo2.png" alt="あいち建物管理" className="lg:w-[80%] w-[70%] mx-auto"/>
+              </h2>
+            </div>
+
+            {/* メニューカード */}
+                <div className="grid grid-cols-2 gap-2 mb-8">
+
+                  <a href="/owner" className="group bg-white rounded-xl shadow-xl  p-4 text-center hover:scale-105 transition">
+                    <img src="./img/家主.png" alt="" className="mb-2 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-xl text-primary">大家様<br/>はこちら</p>
+                  </a>
+
+                  <a href="/tenant" className="group bg-white rounded-xl shadow-xl p-4 text-center hover:scale-105 transition">
+                    <img src="./img/個人入居者.png" alt="" className="mb-2 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-xl text-primary">入居者様<br/>はこちら</p>
+                  </a>
+
+                  <a href="/agency" className="group bg-white rounded-xl shadow-xl  p-4 text-center hover:scale-105 transition">
+                    <img src="./img/法人.png" alt="" className="mb-2 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-xl text-primary">仲介業者様<br/>はこちら</p>
+                  </a>
+
+                  <a href="/company" className="group bg-white rounded-xl shadow-xl  p-4 text-center hover:scale-105 transition">
+                    <img src="./img/会社概要.png" alt="" className="mb-5 h-[60px] mx-auto transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-105" />
+                    <p className="text-xl text-primary">会社概要</p>
+                  </a>
+
+                {/* 電話 */}
+                <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-primary shadow-xl rounded-xl hover:bg-primary/90 mt-2">
+                  <Phone className="h-5 w-5 text-white shrink-0" />
+                  <span className="text-mb text-white">0564-00-0000</span>
+                </a>
+
+                {/* メール */}
+                <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-secondary shadow-xl rounded-xl hover:bg-secondary/90 mt-2">
+                  <Mail className="h-5 w-5 text-white shrink-0" />
+                  <span className="text-mb text-white">info@example.com</span>
+                </a>
+                </div>
+              <div className="grid grid-cols-2 lg:grid lg:grid-cols-1">
+                <p className="text-md lg:text-lg text-primary text-center mb-2">賃貸住宅管理業登録番号<br/>国土交通大臣(2)第810000号</p>
+                <p className="text-md lg:text-lg text-primary text-center lg:mb-2">宅建番号<br/>愛知県知事(3)第114514号</p>
+              </div>
+            </div>
 
         <div className="mx-auto w-full  xl:px-20 lg:px-10 md:px-6 px-4 mt-10">
           {/* 右側 */}
@@ -109,6 +164,10 @@ export function Home() {
               安心と信頼の賃貸管理を作る
               <br />
               <div className="tracking-tighter">プロフェッショナル 集 団</div>
+            <h1 className="z-15 text-3xl md:text-5xl font-bold text-primary leading-12 lg:leading-14 mb-2 tracking-widest text-shadow">
+              安心と信頼の賃貸管理を作る
+              <br />
+              <p className="tracking-tighter">プロフェッショナル 集 団</p>
             </h1>
 
             {/* 画像 */}
@@ -129,7 +188,6 @@ export function Home() {
           </div>
         </div>
       </section>
-
 
       <section className="xl:min-h-screen bg-gray-50 flex pt-4">
         <div className="mx-auto w-full  xl:px-20 lg:px-10 md:px-6 px-4 mt-10 ">
@@ -188,6 +246,7 @@ export function Home() {
         </div>
       </section>
 
+
       {/*私たちについて */}
       <div className="w-full border-t-2 border-dotted border-secondary"></div>
       <section className="bg-gradient-to-b from-gray-50 to-blue-50 pb-64">
@@ -217,7 +276,7 @@ export function Home() {
 
       {/* 経営理念 */}
       <div className="bg-blue-50 absolute  w-full h-full pb-16 z-1"> </div>
-      <section className="relative  bg-[url('/img/bg-house03-mobile.svg')] md:bg-[url('/img/bg-house03.svg')] bg-cover  bg-no-repeat -mt-110 lg:-mt-135  pt-100 pb-110 lg:ml-6 mr-0 z-20">
+      <section className="relative  bg-[url('/img/bg-house03-mobile.svg')] md:bg-[url('/img/bg-house03.svg')] bg-cover  bg-no-repeat -mt-110 md:-mt-165 lg:-mt-155 xl:-mt-135  pt-100 pb-110 lg:ml-6 mr-0 z-20">
       <div className="relative   max-w-7xl mx-auto px-4 text-center pt-10 md:pt-50 ">
         {/* タイトル */}
       <div className="flex flex-col items-center">
@@ -312,6 +371,40 @@ export function Home() {
           </div>
         </section>
       </div>
+
+      {/* お知らせ */}
+      <section className="py-24  pb-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center mb-12 text-3xl font-bold text-primary">お知らせ</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              {announcements.map((announcement, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col sm:flex-row sm:items-center p-6 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 transition-colors"
+                >
+                  <span className="text-md text-gray-600 mb-2 sm:mb-0 sm:w-32">
+                    {announcement.date}
+                  </span>
+                  <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-md rounded mb-2 sm:mb-0 sm:mx-4 self-start">
+                    {announcement.category}
+                  </span>
+                  <span className="flex-1">
+                    {announcement.title}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+                {/* ボタン */}
+          <a
+            href="./news"
+            className="block w-fit mx-auto mt-12 bg-primary text-white font-semibold py-4 px-16 rounded-full hover:bg-primary/85 transition"
+          >
+            もっと見る →
+          </a>
+        </div>
+      </section>
 
       {/* 管理実績 */}
       <section className="py-24 color-secondary-opacity10">
