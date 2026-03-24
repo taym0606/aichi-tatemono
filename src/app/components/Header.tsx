@@ -50,7 +50,7 @@ useEffect(() => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <div className="text-white px-4 py-2 ">
-              <img src="/img/aichitatemono-logo.png" alt="あいち建物管理" className="w-[50%]" />
+              <img src="/img/aichitatemono-logo.svg" alt="あいち建物管理" className="w-[120%]" />
             </div>
           </Link>
 

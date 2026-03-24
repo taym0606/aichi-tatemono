@@ -45,31 +45,16 @@ export function Performance() {
           </div>
           <h1 className="text-white mb-4">管理実績</h1>
           <p className="text-lg opacity-90">
-            20年以上の実績と信頼、安心の賃貸管理サービスを提供しています
+            信頼と安心の賃貸管理サービスを提供しています
           </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <section className="mb-16">
-          <h2 className="text-center mb-12">管理実績（2026年3月現在）</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="h-8 w-8" />
-                </div>
-                <div className="text-3xl mb-2 text-primary">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </div>
+  
 
-      <section className="py-24 color-secondary-opacity10">
+      <section className="py-12 color-secondary-opacity10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl p-4 lg:p-8">
+          <div className=" rounded-3xl p-4 lg:p-8">
           <h2 className="text-center pt-12 pb-20 text-primary text-3xl font-bold">管理実績</h2>
             {/* 賃貸管理項目 */}
             <div className="flex flex-col md:flex-row justify-center gap-12 pr-6 pl-6 mb-12">
