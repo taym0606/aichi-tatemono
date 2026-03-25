@@ -140,13 +140,13 @@ export function Home() {
                 {/* 電話 */}
                 <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-primary shadow-xl rounded-xl hover:bg-primary/90 mt-2">
                   <Phone className="h-5 w-5 text-white shrink-0" />
-                  <span className="text-mb text-white">0564-00-0000</span>
+                  <span className="text-mb text-white">0564-51-8007</span>
                 </a>
 
                 {/* メール */}
                 <a className="flex items-center justify-center gap-2 mb-1 px-2 py-4 bg-secondary shadow-xl rounded-xl hover:bg-secondary/90 mt-2">
                   <Mail className="h-5 w-5 text-white shrink-0" />
-                  <span className="text-mb text-white">info@example.com</span>
+                  <span className="text-mb text-white">info@aichi-tatemono.jp</span>
                 </a>
                 </div>
               <div className="grid grid-cols-2 lg:grid lg:grid-cols-1">
